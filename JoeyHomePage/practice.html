@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dropdown.css">
+    <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
     <title>Practice</title>
   </head>
   <body>
@@ -12,17 +14,69 @@
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <img src="./ASIJ_iGEMlogo.png" height=50px width=50px>
             <span class="ml-3 text-xl">ASIJ iGem 2021</span>
+            &emsp;&emsp;&emsp;&emsp;
           </a>
-          <nav href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900"></a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Home</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Team</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Project</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Model</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Parts</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Safety</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Human Practices</a>
-            <a href="https://www.youtube.com/watch?v=U06jlgpMtQs"class="mr-5 hover:text-gray-900">Judging Form</a>
+          <nav>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Team</button>
+              &emsp;
+              <div class="final__dropdown__menu">
+                <a href="#">Members</a>
+                <a href="#">Collaborations</a>
+              </div>
+            </div>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Project</button>
+              &emsp;
+              <div class="final__dropdown__menu">
+                <a href="#">Description</a>
+                <a href="#">Design</a>
+                <a href="#">Experiments</a>
+                <a href="#">Notebook</a>
+                <a href="#">Results</a>
+                <a href="#">Demonstrate</a>
+                <a href="#">Improve</a>
+                <a href="#">Attributions</a>
+              </div>
+            </div>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Model</button>
+              &emsp;
+              <div class="final__dropdown__menu"> <!-- how to redirect to corresponding html file -->
+              </div>
+            </div>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Parts</button>
+              &emsp;
+              <div class="final__dropdown__menu">
+                <a href="#">Parts Overview</a>
+                <a href="#">Basic Parts</a>
+                <a href="#">Composite Parts</a>
+                <a href="#">Basic Parts</a>
+                <a href="#">Part Collection</a>
+              </div>
+            </div>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Safety</button>
+              &emsp;
+              <div class="final__dropdown__menu">
+              </div>
+            </div>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Human Practices</button>
+              &emsp;
+              <div class="final__dropdown__menu">
+                <a href="#">Human Practices</a>
+                <a href="#">Education and Engagement</a>
+              </div>
+            </div>
+            <div class="final__dropdown">
+              <button class="final__dropdown__hover">Judging Form</button>
+              &emsp;
+              &emsp;
+              <div class="final__dropdown__menu">
+              </div>
+            </div>
           </nav>
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
             <a href="https://linktr.ee/asijigem2021"class="mr-5 hover:text-gray-900">Check out our socials</a>

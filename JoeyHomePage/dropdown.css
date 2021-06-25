@@ -1,0 +1,37 @@
+/* maybe change some colors to match the background */
+
+.final__dropdown{
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    border: 100px;
+  }
+    .final__dropdown__hover{
+      display: inline-block;
+      padding: 5px;
+      border:0 solid #7c8083;
+      cursor: pointer;
+    }
+    .final__dropdown__hover:hover{background-color: rgb(226, 220, 220);}
+    .final__dropdown__menu{
+      position: absolute;
+      display: none;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+
+    }
+    .final__dropdown:hover .final__dropdown__menu{display: block;}
+      .final__dropdown__menu a{
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        border-width: 0;
+        border-top: 1px solid #e0e0e0;
+      }
+      .final__dropdown__menu a:hover{
+        background-color:#f0f0f0;
+        color: #323b40;
+      }
+
+  
