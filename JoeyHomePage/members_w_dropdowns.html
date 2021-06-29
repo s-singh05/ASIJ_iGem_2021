@@ -7,40 +7,117 @@
     <title>ASIJ_Tokyo</title>
 </head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: white; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: pink;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+</style>
+</head>
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="./ASIJ_Tokyo_logo.png" height=50px width=50px>
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">ASIJ_Tokyo</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a href="practice.html"class="mr-5 hover:text-gray-900">Home</a>
-            <!--<a class="mr-5 hover:text-gray-900">Team</a>-->
-            <div class="dropdown">
-                <button class="dropbtn">Team</button>
-                <div class="dropdown-content">
-                  <a href="#">Team Members</a>
-                  <a href="#">Collaborations</a>
-                </div>
-              </div>
-            <a class="mr-5 hover:text-gray-900">Project</a>
-            <a class="mr-5 hover:text-gray-900">Model</a>
-            <a class="mr-5 hover:text-gray-900">Parts</a>
-            <a class="mr-5 hover:text-gray-900">Safety</a>
-            <a class="mr-5 hover:text-gray-900">Human Practices</a>
-            <a class="mr-5 hover:text-gray-900">Judging Form</a>
-            
-          </nav>
-         <!--- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>-->
-        </div>
-      </header>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="#">Team</a>
+  <div class="subnav">
+    <button class="subnavbtn">Project <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Description</a>
+      <a href="#">Design</a>
+      <a href="#">Experiments</a>
+      <a href="#">Notebook</a>
+      <a href="#">Experiments</a>
+      <a href="#">Notebook</a>
+      <a href="#">Results</a>
+      <a href="#">Demonstrate</a>
+      <a href="#">Improve</a>
+      <a href="#">Attributions</a>
+    </div>
+  </div> 
+  <a href="#">Model</a>
+  <div class="subnav">
+    <button class="subnavbtn">Parts<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Parts Overview</a>
+      <a href="#">Basic Parts</a>
+      <a href="#">Composite Parts</a>
+      <a href="#">Part Collection</a>
+    </div>
+  </div> 
+  <a href="#">Safety</a>
+  <div class="subnav">
+    <button class="subnavbtn">Human Practices<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#">Human Practices</a>
+      <a href="#">Education & Engagement</a>
+      <a href="#">Collaborations</a>
+    </div>
+  </div>
+  <a href="##">Judging Form</a>
+</div>
+
+
+</body>
       
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
