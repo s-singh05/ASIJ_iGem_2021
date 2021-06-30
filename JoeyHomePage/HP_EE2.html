@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>ASIJ_Tokyo</title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: white; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar {
+  float: right;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(255, 180, 188);
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(255, 206, 206);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  float: right;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.collapsible {
+  background-color: #FFBFC3;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color:#FFB4BC;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 100px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+div {
+  border: 1px solid white;
+  padding: 50px 50px 100px 120;
+  background-color: white;
+}
+.header {
+  padding: 10px 30px 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+}
+</style>
+
+
+<body>
+    <!--Navigation bar code to put in each page to import navbar-->
+      <div id="nav-placeholder">
+      </div>
+
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+
+<<<<<<< HEAD
+
+    <h2></h2>
+
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+
+    <div class="header">
+      <h1><u>Education & Engagement</u></h1>
+    </div>
+    <p><br></p>
+    <button class="collapsible">ABrCaDabra Promotional Video</button>
+    <div class="content">
+      <center><video width="960" height="720" controls>
+        <source src="./HP Files/ASIJ_Tokyo iGEM Promotional Video.mp4" type=video/mp4>
+      </video></center>
+      <p><br></p>
+      <p>The purpose of our promotional video is to inform others about why the 2021 ASIJ iGEM team chose to focus on breast cancer detection, what we intend to create to address its prevalence in the Japanese community, and how we plan to implement our design. We use animated drawings to represent statistics on awareness, delineate the issue with current mainstream detection mechanisms, and illustrate our ABCD design.</p>
+    </div>
+
+    <p><br></p>
+
+    <button class="collapsible">Promotional Pamphlets</button>
+    <div class="content">
+      <center><embed src="./HP Files/ASIJ_Tokyo_Pamphlets.pdf" width="800px" height="640px" /></center>
+      <p><br></p>
+      <p> This year, we distributed two pamphlets around Tokyo: one about breast cancer awareness, and another about who we are as an iGEM team and what we aim to accomplish. We distributed both of our pamphlets in classrooms at ASIJ as well as around Tokyo, handing them out at train stations in Shibuya, Futakotamagawa, Musashi-sakai, Yoga, Hanzomon, Sakurashinmachi, Toranomon Hills, Kichijoji and Roppongi.</p>
+        <br>
+      <p>Our awareness pamphlet sheds light on how common breast cancer is in Japan, and provides insight into current breast cancer detection methods. It includes information about the symptoms and risk factors for breast cancer, how often individuals should get tested for breast cancer, how much testing costs, and how women can conduct self-exams at home. </p>
+
+    </div>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</body>
