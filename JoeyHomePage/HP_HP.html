@@ -1,84 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>ASIJ_Tokyo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='./style_main.css' rel='stylesheet'>
 </head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: white; 
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.navbar {
-  float: right;
-}
-
-.subnav {
-  float: left;
-  overflow: hidden;
-}
-
-.subnav .subnavbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: rgb(255, 180, 188);
-}
-
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color: rgb(255, 206, 206);
-  width: 100%;
-  z-index: 1;
-}
-
-.subnav-content a {
-  float: left;
-  color: white;
-  text-decoration: none;
-  float: right;
-}
-
-.subnav-content a:hover {
-  background-color: #eee;
-  color: black;
-}
-
-.subnav:hover .subnav-content {
-  display: block;
-}
-</style>
-
 
 <body>
     <!--Navigation bar code to put in each page to import navbar-->
@@ -91,4 +22,71 @@ body {
       });
     </script>
     <!--end of Navigation bar-->
+
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+    <p><br></p>
+
+    <div class="header">
+      <h1><u>Integrated Human Practices</u></h1>
+    </div>
+    <p><br></p>
+    <button class="collapsible">Purpose of Breast Cancer Detection</button>
+    <div class="content">
+      <p>Enter info here</p>
+    </div>
+
+    <p><br></p>
+
+    <button class="collapsible">Interview with Ms. Saki Suzuki</button>
+    <div class="content">
+      <p>Enter info here</p>
+    </div>
+
+    <p><br></p>
+
+    <button class="collapsible">Interviews with Breast Cancer Survivors</button>
+    <div class="content">
+      <p>Enter info here</p>
+    </div>
+
+    <p><br></p>
+
+    <div class="header">
+      <h1><u>Experimental Design Outreach</u></h1>
+    </div>
+
+    <button class="collapsible">Interview with Interview with Mr. Serita</button>
+    <div class="content">
+      <p>Enter info here</p>
+    </div>
+
+    <p><br></p>
+
+    <button class="collapsible">Meeting with Dr. Ikebukuro and Dr. Hiraka</button>
+    <div class="content">
+      <p>Enter info here</p>
+    </div>
+
+    <p><br></p>
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
 </body>
