@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <title>ASIJ_Tokyo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='./style_main.css' rel='stylesheet'>
+</head>
+
+<style>
+    * {
+     box-sizing: border-box; 
+    }
+    body {
+      margin: 0;
+    }
+    #main {
+      display: flex;
+      min-height: calc(100vh - 40vh);
+    }
+    #main > article {
+      flex: 1;
+    }
+    #main > nav1, 
+    #main > aside {
+      flex: 0 0 20vw;
+      background: beige;
+    }
+    #main > nav1 {
+      order: -1;
+    }
+    footer, article, nav1, aside {
+      padding: 1em;
+    }
+    header {
+      padding: 0;
+      align: right;
+    }
+    footer {
+      background: #FFCECE;
+      height: 20vh;
+    }
+</style>
+
+
+<body>
+    <!--Navigation bar code to put in each page to import navbar-->
+      <div id="nav-placeholder">
+      </div>
+
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+  <div id="main">
+    <article>Article</article>
+    <nav1>Nav</nav1>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+
+    <p><br></p>
+    
+</body>
