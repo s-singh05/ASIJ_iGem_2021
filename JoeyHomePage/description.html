@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -9,25 +9,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='./style_main.css' rel='stylesheet'>
+
+    
     <style>
-        p.ex1{
-          border:1px;
-          padding:35px 70px;
-        }
-      </style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: large;
+        text-align: left;
+      }
+
+      p.ex4 {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+  </style>
 </head>
+
+
 
 <body>
     <!--Navigation bar code to put in each page to import navbar-->
-    <div id="nav-placeholder">
+      <div id="nav-placeholder">
+      </div>
+
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Description</u></h1>
+        </div>
+        <br>
+        <br>
+        <p class="ex2"><u>Inspiration</u></p>
+        <br>
+        <div class="content">
+          <p class="ex1">In recent years, breast cancer has become a major problem in the global community, and is the second leading cause of cancer deaths among women (Sun et al., 2017). Breast cancer is a type of metastatic cancer (cancer that spreads throughout the body) originating from breast tissue, and specifically the inner lining of milk ducts or lobules that provide the ducts with milk (Sharma et al., 2010).           </p>
+          <p class="ex1">In Japan, despite advances in medical technology and emphasis on a healthy lifestyle, the incidence of breast cancer has risen yearly (Ohno et al., 2013).  In fact, the projected breast cancer incidence in Japan was estimated to be at 92,300 in 2020, accounting for approximately 20% of all cancer cases in women (Katanoda et al., 2014). Current breast cancer testing methods, such as mammograms and breast MRIs, can be uncomfortable and expensive, which creates a stigma around testing that discourages early screening rates; in Japan, the screening rate for women over the age of 40 is only about 40% (Sceaphierde, 2021). <b>These statistics raise the urgent need for early and widespread diagnosis for breast cancer in Japan.</b></p>
+       
+          <content>
+            <center><img src="./Description Media/ASIJ_Tokyo_Description_img1.png"></content></center>
+            <p class="ex4">Figure 1: Average age (bar graph) and annual rate of breast cancer increase in patients aged 65 years and older (line graph) since 1999 (Uchida et al., 2015). </p>
+          </content>
+          
+          <p class="ex1">With the most common form of breast cancer among Japanese women being triple-negative, there is also a strong demand for novel detection methods that can function even in the absence of common biomarkers such as estrogen receptors, progesterone receptors, and HER2 protein (Takabe 2017). Triple-negative breast cancer is an aggressive subtype of breast cancer where the cells test negative for most commonly established biomarkers. This causes hormonal therapy and HER2 targeted medicines to be ineffective and results in tumor metastasis — one of the greatest challenges of cancer biology. The lack of targeted therapies and poor prognosis for triple-negative breast cancer raises the importance of effective detection and early treatment approaches (Kumar & Aggarwal 2015).</p>
+          <p class="ex1">Literature has shown that early detection of breast cancer has caused the 5-year relative survival rate of breast cancer patients to be above 80% (DeSantis et al., 2016). <b>Therefore, ASIJ iGEM will focus on developing an efficient method for breast cancer diagnosis for the 2021 iGEM competition.</b></p>
+       
+        </div>
+
+        <p class="ex2"><u>Background</u></p>
+        <br>
+        <p class="ex1">This year, we distributed two pamphlets around Tokyo: one about breast cancer awareness, and another about who we are as an iGEM team and what we aim to accomplish. We distributed both of our pamphlets in classrooms at ASIJ as well as around Tokyo, handing them out at train stations in Shibuya, Futakotamagawa, Musashi-sakai, Yoga, Hanzomon, Sakurashinmachi, Toranomon Hills, Kichijoji and Roppongi.<br><br> Our awareness pamphlet sheds light on how common breast cancer is in Japan, and provides insight into current breast cancer detection methods. It includes information about the symptoms and risk factors for breast cancer, how often individuals should get tested for breast cancer, how much testing costs, and how women can conduct self-exams at home. </p>
+        
+        <p class="ex3">What is Breast Cancer?</p>
+        <content>
+          <img src="./Description Media/ASIJ_Tokyo_Description_img2.png">
+        </content>
+          <p class="ex1">Breast cancer is a type of cancer that occurs when cells in the breasts proliferate and spread abnormally, often forming a tumor that can be detected with an x-ray and feels like a lump. Although breast cancer primarily affects women, it can occasionally affect men as well. Most breast cancers begin in the ducts that carry milk to the nipples and are classified as ductal cancers, while breast cancers that start in the glands that make breast milk are classified as lobular cancers. Invasive ductal carcinoma (IDC) is cancer that begins in the milk duct and invades breast tissue outside of the duct. It is the most common type of breast cancer, with 80% of all breast cancer patients being diagnosed with IDC (Ullah 2019). Breast cancer can metastasize—or spread to other parts of the body—when affected cells break away from the primary tumor and travel through blood and lymph vessels. It may spread to any part of the body, but most often spreads to the bones, liver, lungs, and brain (Libson & Lippman 2014). Common signs of breast cancer are breast lumps, changes in appearance (e.g., size and shape) of breast or nipple, and redness or pitting of the skin over the breast. (Mayo Clinic)</p>
+
+    </article>
+
+      <nav1>
+        <p>Nav</p>
+        <p>Promotional Video</p>
+      </nav1>
+
     </div>
 
-  <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar.html");
-    });
-  </script>
-  <!--end of Navigation bar-->
-</body>
+    
 
-</html>
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</body>
