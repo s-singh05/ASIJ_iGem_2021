@@ -9,13 +9,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='./style_main.css' rel='stylesheet'>
+
+    
     <style>
-      p.ex1{
-        border:1px;
-        padding:35px 70px;
+      * {
+       box-sizing: border-box; 
       }
-    </style>
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+
+      /* The sticky class is added to the header with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
+
+      a:link, a:visited {
+      color: rgb(221, 136, 207);
+      
+    }
+  </style>
 </head>
+
+
 
 <body>
     <!--Navigation bar code to put in each page to import navbar-->
@@ -29,55 +110,52 @@
     </script>
     <!--end of Navigation bar-->
 
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Human Practices</u></h1>
+        </div>
+        <br>
+        <br>
+        <p id="IHP" class="ex2">Integrated Human Practice</p>
+        <content>
+            <p class="ex1"><u>General Purpose of Breast Cancer Detection</u><br>The purpose of breast cancer detection is to identify patients with breast cancer as early as possible in their onset such that efficient treatment methods can be administered. Early detection of breast cancer is a way to control and treat breast cancer (Priyanka, 2021). From the various research, interviews, and surveys we conducted, we recognized that creating an accessible, at-home testing kit for breast cancer would help with the lack of testing in Japan and high prevalence of breast cancer mortality.</p>
+            
 
-    <div class="header">
-      <h1><u>Integrated Human Practices</u></h1>
-    </div>
-    <p><br></p>
-    <p class="ex1">Purpose of Breast Cancer Detection</p>
-    <div class="content">
-      <p class="ex1">Enter info here</p>
-    </div>
+        </content>
 
-    <p><br></p>
+        <p id="PI" class="ex2">Project Inspiration</p>
+        <content>
+            <p class="ex1"><u>Interviews</u></p>
+            <p class="ex1"><b>Interview with Ms. Saki Suzuki</b></p>
+            <p class="ex1">From our interview with Ms. Saki Suzuki, leader of RFTC Japan: Hana-me, an organization that educates men and women in Japan on basic information about breast cancer, there is a lack of awareness of breast cancer in Japan. In fact, Ms. Suzuki mentioned that in Japan, individuals know more about earthquake drills than breast cancer as there is a lack of urgency regarding breast cancer despite its prevalence (breast cancer is the fifth leading cause of cancer-related death among Japanese women, according to the Japanese Ministry of Health, Labor and Welfare). When we asked Ms. Suzuki regarding reasons for the lack of testing and awareness, she mentioned that possible causes include the resistance to getting tested and the assumption that breast cancer is not prevalent until old age. <b>Therefore, with the information provided by Ms.Suzuki, we decided to make an informational pamphlet on basic information regarding breast cancer that was advertised in our school and also [passed around the city]</b>. 
+            </p>
+            <p class="ex1">Additionally, Ms. Suzuki also emphasized that a lot of misconceptions regarding breast cancer are from unreliable or inaccurate sources. This misinformation has caused people to be unsafe and not comfortable with getting tested. She recommended taking a friendly approach that respects the ideologies of individuals while encouraging them to try testing when trying to raise awareness of our cause. <b>In addition to our informational pamphlet, we also compiled a list of reliable sources to inform individuals in Japan about breast cancer. 
+            </b></p>
+            <p class="ex1">Finally, Ms. Suzuki also mentioned that educating individuals at a young age is important to make change. She recommended that creating an education curriculum or health programme in school is needed in Japan as schools do not educate students enough on prevalent disorders, which creates a sense of stigma in our community. <b>Taking her suggestions, we spoke to students at our school regarding breast cancer to make a start and [will hopefully extend this to other Japanese schools]
+            </b></p>
+            <p class="ex1">A transcript of our interview can be found <a href="https://docs.google.com/document/d/1BdZ0S7f50ypxv0KKY3bXllkcig4uNZCAsQFta7r074I/edit#" target="_blank">here.</a><br>[Lemon Project Interview conducted by Eva L, Sage F, Sophia S, Noe T, and Aditi P]</p>
+            
+            <p><br</p>
+        
+      </article>
 
-    <p class="ex1">Interview with Ms. Saki Suzuki</p>
-    <div class="content">
-      <p class="ex1">Enter info here</p>
-    </div>
 
-    <p><br></p>
+        <nav1>
+          <div id="scroll">
+            <br>
+            <p><a href="#IHP">Integrated Human Practice</a></p>
+            <br>
+            <p><a href="#PI">Project Inspiration</a></p>
+            <br>
+            
+          </div>
+        </nav1>
 
-    <p class="ex1">Interviews with Breast Cancer Survivors</p>
-    <div class="content">
-      <p class="ex1">Enter info here</p>
-    </div>
-
-    <p><br></p>
-
-    <div class="header">
-      <h1><u>Experimental Design Outreach</u></h1>
-    </div>
-
-    <p class="ex1">Interview with Interview with Mr. Serita</p>
-    <div class="content">
-      <p class="ex1">Enter info here</p>
-    </div>
-
-    <p><br></p>
-
-    <p class="ex1">Meeting with Dr. Ikebukuro and Dr. Hiraka</p>
-    <div class="content">
-      <p class="ex1">Enter info here</p>
     </div>
 
-    <p><br></p>
+    
 
     <script>
     var coll = document.getElementsByClassName("collapsible");
@@ -93,6 +171,23 @@
           content.style.maxHeight = content.scrollHeight + "px";
         } 
       });
+    }
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("scroll");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
     }
     </script>
 </body>
