@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>ASIJ_Tokyo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='./style_main.css' rel='stylesheet'>
+
+    
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+  </style>
+</head>
+
+
+
+<body>
+    <!--Navigation bar code to put in each page to import navbar-->
+      <div id="nav-placeholder">
+      </div>
+
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Description</u></h1>
+        </div>
+        <br>
+        <br>
+        <p class="ex2"><u>Inspiration</u></p>
+        <div class="content">
+          <p class="ex1">In recent years, breast cancer has become a major problem in the global community, and is the second leading cause of cancer deaths among women (Sun et al., 2017). Breast cancer is a type of metastatic cancer (cancer that spreads throughout the body) originating from breast tissue, and specifically the inner lining of milk ducts or lobules that provide the ducts with milk (Sharma et al., 2010).           </p>
+          <p class="ex1">In Japan, despite advances in medical technology and emphasis on a healthy lifestyle, the incidence of breast cancer has risen yearly (Ohno et al., 2013).  In fact, the projected breast cancer incidence in Japan was estimated to be at 92,300 in 2020, accounting for approximately 20% of all cancer cases in women (Katanoda et al., 2014). Current breast cancer testing methods, such as mammograms and breast MRIs, can be uncomfortable and expensive, which creates a stigma around testing that discourages early screening rates; in Japan, the screening rate for women over the age of 40 is only about 40% (Sceaphierde, 2021). <b>These statistics raise the urgent need for early and widespread diagnosis for breast cancer in Japan.</b></p>
+       
+          <content>
+            <center><img src="./Description Media/ASIJ_Tokyo_Description_img1.png"></content>
+              <figcaption>Figure 1: Average age (bar graph) and annual rate of breast cancer increase in patients aged 65 years and older (line graph) since 1999 (Uchida et al., 2015).</figcaption></center>
+            
+          </content>
+          
+          <p class="ex1">With the most common form of breast cancer among Japanese women being triple-negative, there is also a strong demand for novel detection methods that can function even in the absence of common biomarkers such as estrogen receptors, progesterone receptors, and HER2 protein (Takabe 2017). Triple-negative breast cancer is an aggressive subtype of breast cancer where the cells test negative for most commonly established biomarkers. This causes hormonal therapy and HER2 targeted medicines to be ineffective and results in tumor metastasis — one of the greatest challenges of cancer biology. The lack of targeted therapies and poor prognosis for triple-negative breast cancer raises the importance of effective detection and early treatment approaches (Kumar & Aggarwal 2015).</p>
+          <p class="ex1">Literature has shown that early detection of breast cancer has caused the 5-year relative survival rate of breast cancer patients to be above 80% (DeSantis et al., 2016). <b>Therefore, ASIJ iGEM will focus on developing an efficient method for breast cancer diagnosis for the 2021 iGEM competition.</b></p>
+       
+        </div>
+
+        <p class="ex2"><u>Background</u></p>
+        <p class="ex3">What is Breast Cancer?</p>
+        <p><br></p>
+        <content>
+          <center><img src="./Description Media/ASIJ_Tokyo_Description_img2.png" height="100px"></content></center>
+          <figcaption>Figure 2: Common Symptoms of Breast Cancer</figcaption>
+        
+          <p class="ex1">Breast cancer is a type of cancer that occurs when cells in the breasts proliferate and spread abnormally, often forming a tumor that can be detected with an x-ray and feels like a lump. Although breast cancer primarily affects women, it can occasionally affect men as well. Most breast cancers begin in the ducts that carry milk to the nipples and are classified as ductal cancers, while breast cancers that start in the glands that make breast milk are classified as lobular cancers. Invasive ductal carcinoma (IDC) is cancer that begins in the milk duct and invades breast tissue outside of the duct. It is the most common type of breast cancer, with 80% of all breast cancer patients being diagnosed with IDC (Ullah 2019). Breast cancer can metastasize—or spread to other parts of the body—when affected cells break away from the primary tumor and travel through blood and lymph vessels. It may spread to any part of the body, but most often spreads to the bones, liver, lungs, and brain (Libson & Lippman 2014). Common signs of breast cancer are breast lumps, changes in appearance (e.g., size and shape) of breast or nipple, and redness or pitting of the skin over the breast. (Mayo Clinic)</p>
+
+        <p class="ex3">Current Solutions</p>
+        <p class="ex1">Existing methods of breast cancer detection and diagnosis include ultrasound, mammogram, MRI and biopsy. Breast ultrasound is a noninvasive technique that uses a transducer that is pressed against the skin to send and measure sound waves that bounce off internal organs. This allows the radiologist to visualize the internal structure, size, shape, and consistency of the breast to detect any abnormalities or lumps that may be indicators of breast cancer (radiologyinfo.org). In contrast, mammograms rely on a machine that takes a series of X-ray images to look at breast tissue. The machine compresses the breast using two plates, which allows the X-rays to easily go through the tissue, and lowers radiation exposure. Mammograms can detect breast cancer by showing physicians abnormal changes in breast tissue (Mammogram Basics, n.d.). MRIs (Magnetic Resonance Imaging) uses a combination of radio and magnetic waves to show detailed pictures of the breast, and does not use radiation. Typically, MRIs can capture smaller breast lesions that mammograms miss (Hopkins Medicine). Unlike MRIs, biopsies are more invasive and require procuring a sample of breast tissue. Surgical and core needle biopsies are more invasive and are used to remove small cylinders of tissue or parts of lumps in the breast. Fine needle aspiration biopsies are used to remove a small sample of tissue to determine if it is cancerous. Some biopsies require the use of an ultrasound device to locate a mass and then take a sample of tissue for analysis (Mayo Clinic). Among these methods, only the first three are normally used during periodical checkups. In Japan, insurance only covers breast examinations conducted by mammogram or ultrasound. MRIs are not covered by insurance, and often cost over five times as much (Nihonbashi Kenshin Center).</p>
+
+        <content>
+          <center><img src="./Description Media/ASIJ_Tokyo_Description_img3.png" width = "300px" height="300px"></content>
+            <figcaption>Figure 3: Mammography- a common method of testing for breast cancer</figcaption></center>
+          <p><br></p>
+        <p class="ex1">Although it is recommended that women—middle-aged and above—should be screened approximately once every one or two years (on top of regular self-checks), only 44.9% of Japanese women aged 40 to 69 registered for an examination within the two years leading up to 2016 (知っておきたいがん検診, n.d.). Given that breast cancer has been a growing issue within Japan since the 1900s, this statistic poses to be a significant concern today (Yonemoto, 1980). </p>
+        <p class="ex1">Our Human Practices team has identified a number of causes for this trend through research, interviews with professionals, and community/international surveys.  </p>
+      
+        <content>
+          <center><img src="Description Media/ASIJ_Tokyo_Description_img4.png" width="700px" height="300px"></center>
+        </content>
+        <figcaption>Figure 4: Results from our International Survey showing the common factors that prevent people from getting tested for breast cancer </figcaption>
+      <p class="ex1">The main factors preventing people from being tested or making them unwilling to do so include the cost (insurance only covers 30% of the cost—or none, if lacking a doctor’s recommendation), inconvenience, time commitment, social stigma, and so on. Another reason that is especially common among Japanese women is the fear of pain. Mammograms can be quite painful, given how it involves pressing the patient’s breasts between two plates. Additionally, many women feel uncomfortable about the idea of having their breast screening conducted by a male doctor, as certain factors like the gender of the doctor are not specified or guaranteed by the government or companies that provide subsidized or free testing for citizens/employees.</p>
+      
+      <p class="ex2"><u>Goal</u></p>
+        <p class="ex1">Based on the raised issues regarding the current methods of detection, our goal is to create an at-home, convenient breast cancer testing kit that would be similar in design to a pregnancy test. This testing kit would make testing more accessible, less invasive, and more affordable for women of all ages. Through our testing kit, we hope to make early screening and detection rates significantly higher, and allow women to go through a pain free and simple process that is reliable and accurate to detect breast cancer. </p>
+
+        <p class="ex2"><u>Project Focus</u></p>
+        <p class="ex3">Summary</p>
+        <p class="ex1">In order to build our optimal test kit and address issues such as accessibility, cost, and convenience, we decided to employ aptamers and a cell-free system such that we could develop an at-home, noninvasive testing kit for anyone who wanted to screen for breast cancer. </p>
+        <p class="ex1">Our project is a <b>two-year phase project</b>. In Year One (2021 iGEM Season), inspired by past projects from XMU-China(2018) and INSA-Lyon(2016), we will focus on theoretical-based experiments such as <b>observing the interaction between aptamer and biomarker</b> along with <b> testing our gold-nanoparticle detection system with our biomarkers synthesized from E.Coli. </b>. Specifically, our system will use <b> colorimetric output produced by aggregation of gold nanoparticles to detect for the binding between aptamer and biomarker</b>.</p>
+    
+        <content>
+          <center><img src="Description Media/ASIJ_Tokyo_Description_img5.png" width="400px" height="300px"></center>
+        </content>
+        <figcaption>Figure 5: Gold Nanoparticle Colorimetric Biosensor Design <br> By adding the aptamer to the AuNP and incubating overnight, physical adsorption of aptamer to AuNP occurs, and when biomarker is added, the aptamer has a structural change that results in a change from red to blue. (Smith et al. 2016)</figcaption>
+        
+        <p class="ex1">In Year Two, we hope to build a <b>physical hardware product combined with computer software</b> for easy at-home detection based on our results. In addition, we plan on extending our results from the first year by converting our gold-nanoparticle assay into a portable and convenient paper strip. Our final testing kit will detect the presence of breast cancer via color change when aptamers bind to their target biomarkers. Due to the stigma surrounding testing in Japan, we understand that it is crucial to educate the larger community about the importance of testing, and devise our hardware around women’s experiences getting tested and their preferences; we have accounted for these factors through interviews and programs in the human practices section of our project. </p>
+        <p class="ex3">Year 1 Focus</p>
+        <p class="ex1">This year, we decided to focus on developing a detection system that could be extended into a lab kit for the second phase of our iGEM project. </p>
+        <p class="ex1">Various biomarkers for breast cancer exist, and detection of these biomarkers will be essential towards developing a novel solution for our project. For our project this year, we decided to investigate three biomarkers: Mucin 1, Mammaglobin B, and HER-2, biomarkers that are commonly overexpressed in breast cancer(Hassan et al. 2017, Jing et al. 2019).</p>
+        <p class="ex1">We decided to employ aptamers, which are single stranded oligonucleotides, to help detect our biomarkers. Aptamers are significantly cheaper and easier than utilizing conventional antibodies, and will help in our development of a convenient test kit (Lakhin et al. 2013). </p>
+        <p class="ex1">In order to develop a robust detection system, for our 2021 iGEM Project, <b>we first decided to synthesize our biomarkers of interest in E.Coli to model the human system</b>. We made this decision as ordering biomarkers is often expensive and we wanted to use a synthetic biology based engineering solution to tackle this cost issue. In addition, we wanted this to serve as a proof-of-concept for our testing kit that will be eventually utilized in a human system. </p>
+        <content>
+          <center><img src="Description Media/ASIJ_Tokyo_Description_img6.png" width="600px" height="300px"></center>
+        </content>
+        <figcaption>Figure 6: Outline of ASIJ_Tokyo Experiments(E.Coli synthesis of biomarkers, Aptamer-based detection, Verification of synthesized biomarkers, extension to at home kit)</figcaption>
+        
+        <p class="ex1">Next, while interaction between biomarker and aptamer is quoted in literature, we wanted to test this finding for ourselves as many aptamers are still uncharacterized and need verification. Therefore, we <b>verified the interaction between aptamer and biomarker via ELISA</b> in order to demonstrate the strong binding abilities of aptamer. During the ELISA assay, we also compared the activity of our synthesized and ordered biomarkers in order to measure the activity of our synthesized biomarkers.</p>
+        <p class="ex1">Finally, <b>we developed an aptamer based detection assay using AU nanoparticles</b>. AU nanoparticles are highly versatile and have been adapted into portable lateral flow technologies. Since our objective for the second year was to design a testing kit that was convenient and affordable, we believe that using AU nanoparticles will set the framework and basis for our transition into the design of a testing kit in iGEM for the second year.</p>
+       
+        <p class="ex2"><u>References</u></p>
+        <p class="ex1">American College of Radiology, & Radiological Society of North America. (2019, October 7). <i>Ultrasound - breast</i>. Radiologyinfo.org. https://www.radiologyinfo.org/en/info/breastus. </p>
+        <p class="ex1"><i>Breast magnetic resonance imaging (mri)</i>. Johns Hopkins Medicine. (n.d.). https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/breast-mri. </p>
+        <p class="ex1">DeSantis, C. E., Fedewa, S. A., Goding Sauer, A., Kramer, J. L., Smith, R. A., & Jemal, A. (2016). Breast cancer statistics, 2015: Convergence of incidence rates between black and white women. <i>CA: A Cancer Journal for Clinicians</i>, 66(1), 31–42.</p>
+        <p class="ex1">Hassan, E. (2017). <i>In Vitro Selections of Mammaglobin B and Mammaglobin A Aptamers for detecting Metastatic Breast Cancer Cells Using Terahertz Chemical Microscopy </i>[Phd, Université du Québec, Institut national de la recherche scientifique]. http://espace.inrs.ca/id/eprint/8023/</p>
+        <p class="ex1">Hassan, E. M., Willmore, W. G., McKay, B. C., & DeRosa, M. C. (2017). In vitro selections of mammaglobin A and mammaglobin B aptamers for the recognition of circulating breast tumor cells. Scientific Reports, 7(1), 1–18.</p>
+        <p class="ex1">Jing, X., Liang, H., Hao, C., Yang, X., & Cui, X. (2019). Overexpression of MUC1 predicts poor prognosis in patients with breast cancer. Oncology Reports, 41(2), 801–810.
+        </p>
+        <p class="ex1">Katanoda, K., Kamo, K.-I., Saika, K., Matsuda, T., Shibata, A., Matsuda, A., Nishino, Y., Hattori, M., Soda, M., Ioka, A., Sobue, T., & Nishimoto, H. (2014). Short-term projection of cancer incidence in Japan using an age-period interaction model with spline smoothing. <i>Japanese Journal of Clinical Oncology</i>, 44(1), 36–41.
+        </p>
+        <p class="ex1">Keefe, A. D., Pai, S., & Ellington, A. (2010). Aptamers as therapeutics. <i>Nature Reviews. Drug Discovery</i>, 9(7), 537–550.
+        </p>
+        <p class="ex1">Kufe, D. W. (2013). MUC1-C oncoprotein as a target in breast cancer: activation of signaling pathways and therapeutic approaches. <i>Oncogene</i>, 32(9), 1073–1081.
+        </p>
+        <p class="ex1">Kumar, P., & Aggarwal, R. (2015, September 4). <i>An overview of triple-negative breast cancer</i>. Archives of gynecology and obstetrics. https://pubmed.ncbi.nlm.nih.gov/26341644/. 
+        </p>
+        <p class="ex1">Kumar, P., Ji, J., Thirkill, T. L., & Douglas, G. C. (2014). MUC1 Is Expressed by Human Skin Fibroblasts and Plays a Role in Cell Adhesion and Migration. <i>BioResearch Open Access</i>, 3(2), 45–52.
+        </p>
+        <p class="ex1"><i>Mammogram Basics</i>. (n.d.). Retrieved August 16, 2021, from https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/mammogram-basics.html</p>
+        <p class="ex1">Libson, S., & Lippman, M. (2014, February 26). <i>A review of clinical aspects of breast cancer</i>. International review of psychiatry (Abingdon, England). https://pubmed.ncbi.nlm.nih.gov/24716497/. 
+        </p>
+        <p class="ex1">Mayeux, R. (2004). Biomarkers: potential uses and limitations. <i>NeuroRx: The Journal of the American Society for Experimental NeuroTherapeutics</i>, 1(2), 182–188.
+        </p>
+        <p class="ex1">Mayo Clinic Staff. (2019, July 31). Breast biopsy. Mayo Clinic. https://www.mayoclinic.org/tests-procedures/breast-biopsy/about/pac-20384812. 
+        </p>
+        <p class="ex1">Mayo Foundation for Medical Education and Research. (2021, June 4). <i>Breast cancer</i>. Mayo Clinic. https://www.mayoclinic.org/diseases-conditions/breast-cancer/symptoms-causes/syc-20352470. 
+        </p>
+        <p class="ex1">Ohno, S., Kuroi, K., & Toi, M. (2013). An overview of the Japan Breast Cancer Research Group (JBCRG) activities. <i>Breast Cancer </i>, 20(4), 291–295.
+        </p>
+        <p class="ex1">Sceaphierde, C. (2021, April 12). <i>Pink Ribbon Design Award raising awareness about breast cancer in Japan</i>. https://japantoday.com/category/features/health/pink-ribbon-design-award-raising-awareness-about-breast-cancer-in-japan
+        </p>
+        <p class="ex1">Sharma, G. N., Dave, R., Sanadya, J., Sharma, P., & Sharma, K. K. (2010). Various types and management of breast cancer: an overview. <i>Journal of Advanced Pharmaceutical Technology & Research</i>, 1(2), 109–126.
+        </p>
+        <p class="ex1">Smith, J. E., Chávez, J. L., Hagen, J. A., & Kelley-Loughnane, N. (2016). Design and Development of Aptamer–Gold Nanoparticle Based Colorimetric Assays for In-the-field Applications. <i>Journal of Visualized Experiments: JoVE</i>, 112. https://doi.org/10.3791/54063
+        </p>
+        <p class="ex1">Sun, Y.-S., Zhao, Z., Yang, Z.-N., Xu, F., Lu, H.-J., Zhu, Z.-Y., Shi, W., Jiang, J., Yao, P.-P., & Zhu, H.-P. (2017). Risk Factors and Preventions of Breast Cancer. <i>International Journal of Biological Sciences</i>, 13(11), 1387–1397.
+        </p>
+        <p class="ex1">Takabe, K. (2017, July 25). <i>Breast cancer rates rising Among Japanese women</i>. Roswell Park Comprehensive Cancer Center. https://www.roswellpark.org/cancertalk/201707/breast-cancer-rates-rising-among-japanese-women. 
+        </p>
+        <p class="ex1">Ullah, M. F. (2019, August 28). <i>Breast Cancer: Current Perspectives on the Disease Status</i>. SpringLink. https://link.springer.com/chapter/10.1007%2F978-3-030-20301-6_4. 
+        </p>
+        <p class="ex1">Uchida, K., Ohashi, H., Kinoshita, S., Nogi, H., Kato, K., Toriumi, Y., Yamashita, A., Kamio, M., Mimoto, R., & Takeyama, H. (2015). <i>Breast cancer screening and the changing population pyramid of Japan</i>. Breast Cancer , 22(2), 172–176.
+        </p>
+        <p class="ex1">Yonemoto, R. H. (1980, September). <i>Breast cancer in Japan and United STATES: EPIDEMIOLOGY, hormone RECEPTORS, pathology, and survival</i>. Archives of surgery (Chicago, Ill. : 1960). https://pubmed.ncbi.nlm.nih.gov/6251779/. 
+        </p>
+        <p class="ex1">Zou, X., Wu, J., Gu, J., Shen, L., & Mao, L. (2019). Application of Aptamers in Virus Detection and Antiviral Therapy.<i> Frontiers in Microbiology</i>, 10, 1462.
+        </p>
+        <p class="ex1"><i>乳がん検診にかかる費用はどれくらい？ ４つの受診方法. 健診プラザ日本橋.</i> (2017, August 8). http://nihombashi-mc.jp/column/breast-cancer/breast-cancer-cost.html. 
+        </p>
+        <p class="ex1">知っておきたいがん検診. (n.d.). Retrieved August 16, 2021, from https://www.med.or.jp/forest/gankenshin/data/japan/</p>
+
+
+      </article>
+
+    
+
+      <nav1>
+        <p>Nav</p>
+        <p>Promotional Video</p>
+      </nav1>
+
+    </div>
+
+    
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</body>
