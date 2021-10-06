@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <title>ASIJ_Tokyo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='./style_main.css' rel='stylesheet'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>ASIJ_Tokyo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='./style_main.css' rel='stylesheet'>
+
+    
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+
+      /* The sticky class is added to the header with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
+  </style>
 </head>
+
 
 
 <body>
@@ -24,42 +105,183 @@
     </script>
     <!--end of Navigation bar-->
 
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
-    <p><br></p>
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Collaborations</u></h1>
+        </div>
+        <br>
+        <br>
+        <p id="asia" class="ex2">Asia High School Joint Collaboration Network</p>
+        <br>
+        <content>
+          <div class="content">
+            <center><img src="./HP Files/collab1.png" width="800px" height="450px"></center>
+            <figcaption>9/25 Northeast Asia Joint Collaboration Network 1st Meeting</figcaption>
+          </div>
+            <p class="ex1">ASIJ_Tokyo and Korea_HS established the Asia High School Joint Collaboration Network, a network between high school teams in the Asia region. With the majority of teams participating in iGEM being collegiate teams, we found that it was often difficult for high school teams to find meaningful collaboration or discussion opportunities due to the large knowledge level gap between HS and collegiate teams.  Despite the wonderful advice that collegiate teams can provide to HS teams, we found that it was also very important to interact with teams at our own age level.</p>
+            <p class="ex1">For our collaboration network, we arranged for teams to introduce their projects and collaborate in small groups to aid each other in areas like wet lab, dry lab, and wiki publication. Through our network, we wanted to make something bigger and more impactful than just a few superficial meetings! For future meetings, we plan on having teams share their presentational videos or wiki such that students can offer feedback and clarification on various medal criteria.</p>
+            <p class="ex1">For the 2021 iGEM season, we had teams Korea_HS(Korea), ASIJ_Tokyo(Japan), KCIS_New Taipei(Taiwan), NYC_B1O(New York), Shanghai_United_HS(China) participate in our joint collaboration network.
+              The following teams expressed interest in our network but did not participate due to time constraints: Mingdao(China), Alpha Luco(China), ULinkSIP(China), HK_SSC(Hong Kong).</p>
+            
+            <p class="ex1">Please see the PDF below for the outline of our Joint Collaboration Network. Following the conclusion of the iGEM Jamboree, we plan on publishing a video about the iGEM experience for high schoolers in order to promote synthetic biology.</p>
+            <div class="content">
+              <center><embed src="./HP Files/iGEM Asia High School Joint Collaboration Network.pdf" width="800px" height="450px"/></center>
+            </div>
+        </content>
+        
+        <content>
+            <br>
+            <p id="sdg" class="ex2">iGEM x SDG Impact Challenge</p>
+            <br>
+            <div class="content">
+              <center><img src="./HP Files/collab2.png" width="800px" height="450px"></center>
+              <figcaption>9/18 TAS iGEM X SDG Challenge</figcaption>
+            </div>
+            <p class="ex1">On September 18th 2021, we participated in the iGEM x SDG Impact Challenge organized by TAS Taipei.</p>
+            <p class="ex1">During this challenge, we were asked to focus on <b>tackling the UN’s Sustainable Development Goals</b> by making and assigning tasks for other teams to complete. For our tasks, we asked teams to put us in contact with breast cancer experts to promote good health and well being and for teams to promote our dry lab webinar to promote quality education.</p>
+            <p class="ex1">We helped iGEM Thessaly complete their extensive survey on Mediterranean diet and RUBochum on their research of endangered species and contributors to water pollution as part of the conference.</p>
+            <p class="ex1">We thank TAS Taipei for organizing this wonderful event and the teams that helped complete our tasks!</p>
+            <p><br</p>
+        </content>
 
-    <div class="header">
-      <h1><u>Collaborations</u></h1>
+        <p id="meet" class="ex2">iGEM Japan Meetup</p>
+        <br>
+        <content>
+            <div class="content">
+              <center><img src="./HP Files/collab3.png" width="800px" height="450px"></center>
+              <figcaption>9/11 iGEM Japan Meetup</figcaption>
+            </div>
+            <p class="ex1">On September 11th 2021, we participated in the iGEM Japan Meetup organized by Tokyo Tech. </p>
+            <p class="ex1">During this meetup, we had the opportunity to hear presentations from UTokyo, Gifu, Qdai, Kyoto, and Tokyo Tech and learn about the different projects teams in the region were organizing. </p>
+            <p class="ex1">We also received some advice and clarification from iGEM Ambassador Ryo Niwa regarding the <b>direction of our two-year project</b> and <b>what we plan on completing in our first phase.</b> We also had a chance to chat with UTokyo and Tokyo Tech regarding experiments during the COVID-19 pandemic and working as a high-school team.</p>
+            <p class="ex1">We thank all teams that spoke with us and offered insights and Tokyo Tech for hosting the wonderful virtual event.</p>
+            <p class="ex1">iGEM Japan Meetup Participants: Gunma, KAITjapan, Waseda, HokkaidoU, UTokyo, Gifu, Qdai, Kyoto, Tokyo Tech, ASIJ_Tokyo</p>
+            <p><br</p>
+        </content>
+
+        <p id="ntu" class="ex2">NTU Virtual Meetup</p>
+        <br>
+        <content>
+          <div class="content">
+            <center><img src="./HP Files/collab4.png" width="800px" height="450px"></center>
+            <figcaption>8/23 NTU Collaboration First Meeting</figcaption>
+          </div>
+          <p class="ex1">We met with NTU, a collegiate team from Singapore on August 23, 2021. </p>
+          <p class="ex1">After our initial meeting, we remained in contact with NTU as they helped mentor and troubleshoot some of our experiments. Specifically, we received wonderful feedback from NTU regarding how to work on our aptamer-biomarker assay with limited equipment. NTU suggested we do an <b>ELISA assay to verify the activity between our aptamer and biomarker</b>, and based on recommendations from NTU, we were able to successfully verify the interaction between aptamer and biomarker(which can be found here).
+          </p>
+          <p class="ex1">As collaboration between the two teams, we helped NTU conduct multiple interviews regarding the scope of COVID-19 in Japan to help with their inspiration and motivation behind their detection kit.</p>
+          <p class="ex1">We thank NTU for mentoring and assisting us with our wet lab projects and hope to collaborate again in the future.</p>
+        </content>
+          
+        <p id="hkis" class="ex2">HKIS Virtual Meetup</p>
+        <content>
+            <p class="ex1">On July 1st, 2021, we had a virtual meetup with HKIS, a first-year team from Hong Kong. During the meeting, we exchanged project ideas and realized the parallels between our projects. Namely, the use of Cas12a. We are hoping to be able to build off of each other’s research regarding this topic. </p>
+            <p class="ex1">Additionally, we agreed to spread our respective surveys to our local communities. HKIS seemed to have sufficient expert opinion but needed more non-specialist respondents so we will be trying to facilitate that. As Japan also has a huge oyster business (HKIS’s focus), we are confident that we will be able to help collect insightful information for HKIS.</p>
+            <p class="ex1">We thank HKIS for all their help and contributions to our team!</p>
+        </content>
+
+        <p id="khs" class="ex2">Korea HS Virtual Meetup</p>
+        <br>
+        <content>
+          <div class="content">
+            <center><img src="./HP Files/collab5.png" width="800px" height="450px"></center>
+            <figcaption>7/1 Korea_HS Partnership Meeting 1</figcaption>
+          </div>
+          <p class="ex1">On July 1st 2021, we had a virtual meetup with Korea_HS, a group of students from Korea. Coincidentally, Korea_HS is also working on breast cancer this year, and specifically, they are designing a cell specific cell penetrating peptide for the efficient delivery of siRNA into cancer cells. Knowing this, we decided to meet and build off each other’s knowledge due to the immense relevance between the two teams.</p>
+          <p class="ex1">Following the meeting, we <b>established a partnership between the two teams.</b> As ASIJ had various contacts in the field of protein modeling, we assisted Korea_HS with protein modeling while Korea_HS helped ASIJ with some of the wet lab experiments. Through this, both teams were able to learn invaluable skills. More details on the partnership can be found in this section.
+          </p>
+          <p class="ex1">With our combined interests and desire to make a change, Korea_HS and ASIJ have also started a joint education program towards breast cancer, where we have made multiple videos narrating simple concepts on breast cancer and synthetic biology. We hope that this Youtube channel can be useful to iGEM teams and individuals interested in the aforementioned relevant topics.</p>
+        </content>
+
+        <p id="kcis" class="ex2">KCIS New Taipei Virtual Meetup</p>
+        <content>
+          <div class="content">
+            <center><img src="./HP Files/collab6.png" width="800px" height="450px"></center>
+            <figcaption>6/21 KCIS New Taipei Virtual Meetup</figcaption>
+          </div>
+          <p class="ex1">On June 21st 2021, we had a virtual meetup with KCIS New Taipei, a first year team from Taiwan. We exchanged project ideas and gave some feedback on the status of each team’s project. Specifically, KCIS asked us some very insightful questions about testing the binding efficiency between the aptamer and biomarker and also how the current detection methods compare to our proposed detection kit. Based on the advice from KCIS, we decided to consult the help of experts to one, to model the interaction between biomarker and aptamer and two, learn about the existing medical technologies and their limitations.</p>
+          <p class="ex1">We also gave KCIS some general feedback on human practices and how to reach out to their community, emphasizing the need to tie tasks during human practices to the overall project. </p>
+          <p class="ex1">Based on our discussions, we decided to collaborate with KCIS New Taipei on the educational component of our respective projects. KCIS helped translate our informational flyer into Chinese while we helped translate their flyer into Japanese.
+          </p>
+          <p class="ex1">We thank KCIS for all their help and contributions to our team!</p>
+        </content>
+
+        <p id="database" class="ex2">2021 ASIJ iGEM Database Project</p>
+        <content>
+          <p class="ex1">We started a Database project open to all 2021 iGEM teams to contribute to! This project aimed to gather information about the projects of teams worldwide to make it easier to find nearby teams to collaborate with.</p>
+          <p class="ex1">The idea of this project was based on the successful AfteriGEM Phoenix Project. Realizing that Phoenix Project only applied to past teams, we decided to extend this to current teams participating in the 2021 Jamboree. </p>
+          <p class="ex1">Our database collected a list of teams participating in the 2021 Jamboree, their project abstract/ideas, and additional comments from teams who were seeking specific help. For example, some teams included a link to their survey in an effort to get more international respondents.</p>
+          <p class="ex1">We thank all teams for collaborating with us by filling out the survey for our database and utilizing our database to find outreach opportunities.</p>
+          <p class="ex1">We thank all teams for collaborating with us by filling out the survey for our database and utilizing our database to find outreach opportunities.</p>
+        </content>
+
+        <p id="promo" class="ex2">iGEM Promotional Video Collaboration</p>
+        <content>
+          <p class="ex1">For the promotional video, we helped iGEM Thessaly translate the script of their video into Japanese as a way of collaboration between the two teams. iGEM Thessaly also kindly helped us transalte our promotional video script into Greek in order for both our videos to reach a larger global audience. </p>
+        </content>
+      </article>
+
+
+        <nav1>
+          <div id="scroll">
+            <br>
+            <br>
+            <br>
+            <p><a href="#asia">Asia High School Joint Collaboration Network</a></p>
+            <br>
+            <p><a href="#sdg">iGEM x SDG Impact Challenge</a></p>
+            <br>
+            <p><a href="#meet">iGEM Japan Meetup</a></p>
+            <br>
+            <p><a href="#ntu">NTU Virtual Meetup</a></p>
+            <br>
+            <p><a href="#hkis">HKIS Virtual Meetup</a></p>
+            <br>
+            <p><a href="#khs">Korea HS Virtual Meetup</a></p>
+            <br>
+            <p><a href="#kcis">KCIS New Taipei Virtual Meetup</a></p>
+            <br>
+            <p><a href="#database">2021 ASIJ iGEM Database Project</a></p>
+          </div>
+        </nav1>
+
     </div>
-    <p><br></p>
-    <button class="collapsible">2021 iGEM Project Database</button>
-    <div class="content">
-      <p>Enter info here</p>
-    </div>
 
-    <p><br></p>
-    <button class="collapsible">KCIS New Taipei Virtual Meet-up</button>
-    <div class="content">
-      <p>Enter info here</p>
-    </div>
-
-    <p><br></p>
-
-    <button class="collapsible">HKIS Virtual Meet-up</button>
-    <div class="content">
-      <p>Enter info here</p>
-    </div>
-
-    <p><br></p>
-
-    <button class="collapsible">Korea HS Virtual Meet-up</button>
-    <div class="content">
-      <p>Enter info here</p>
-    </div>
-
-    <p><br></p>
     
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("scroll");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
 </body>
