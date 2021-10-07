@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>ASIJ_Tokyo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='./style_main.css' rel='stylesheet'>
+
+    
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+  </style>
+</head>
+
+
+
+<body>
+    <!--Navigation bar code to put in each page to import navbar-->
+      <div id="nav-placeholder">
+      </div>
+
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Implementation</u></h1>
+        </div>
+        <br>
+        <br>
+        <p class="ex2"><u>Inspiration</u></p>
+        <div class="content">
+          <p class="ex1">When we first proposed to construct a detection kit for breast cancer, we wanted to make sure that our detection kit would be implementable in the real-world market. Therefore, we used a combination of our <b>human practice interviews</b> and <b>consultation with entrepreneurs</b> to help shape and influence our project design.</p>
+        </div>
+
+        <p class="ex2"><u>Using Aptamers and AuNPs as Detection Component </u></p>
+        
+          <p class="ex1">To develop a convenient test kit, we first performed research on different ways to help detect our biomarkers. Through our literature review, we discovered the prominence of aptamers, which are short oligonucleotides that can bind to a specific target, in this case, our biomarker. Aptamers have been compared to antibodies in their ability to specifically bind to target molecules, and are significantly cheaper and convenient compared to conventional antibodies(McKeague, 2017).  </p>
+          <p class="ex1">With our discovery of aptamers, we then thought of methods of utilizing aptamers to help detect our biomarkers in a cell-free environment. We came across methods like using ELISA and measuring fluorescence intensity, however, many of these methods are not portable and requires the use of expensive experiment. For example, not only does ELISA require the use of a 96-well plate reader to measure for absorbance, but it also requires the use of antibodies which defeats the purpose of utilizing aptamers. These limitations led us to use gold nanoparticles, which are versatile devices for detection based on their aggregate and non-aggregate modes. When gold nanoparticles undergo a change in mode, this results in a change in the color of the nanoparticle solution. Therefore, <b>we hypothesized that by monitoring the color change of our AuNP assay, we will be able to detect our biomarkers using aptamers</b>.</p>
+          <p class="ex1">Using colorimetric detection has many benefits that can aid with the convenience and implementation of our detection device. Our AuNP assay can be constructed by just incubating the aptamers with the AuNP overnight, before adding the biomarker of interest. Furthermore, we can eliminate the use of specified equipment from laboratories by <b>combining our AuNPs with lateral flow immunoassay strips</b>, which allows for a portable and low-cost detection system (Pan et al., 2018). We plan on <b>developing software</b> next year that can help quantify the concentration of biomarkers based on the color of the AuNP solution, which will help test for and indicate signs of breast cancer.</p>
+          <content>
+            <center><img src="./Implementation Media/ASIJ_Tokyo_Implementation_img1.png" width = "600px" height="500px"></content>
+              <figcaption>Figure 1: Four-Step Approach to Detection Kit Implementation <br>Created with BioRender.com</figcaption></center>
+            <p><br></p>
+        <p class="ex2">Sensitivity and Specificity</p>
+        <p class="ex1">One of the largest concerns for our project was the issue of <b>false positives and inaccurate diagnostic results</b>. With breast cancer stigma being a huge issue in Japan, we wanted to make sure our detection kit followed <b>local and global guidelines</b> to create a convenient device for women around the world.</p>
+        <p class="ex1">While we have not been able to test the sensitivity of our AuNP assay, for next year, we will be making sure that our system can detect up to <b>15.2 ng/mL of Her-2</b>, and similar levels for Mucin-1 and Mammaglobin B(Zhang et al., 2020). Unfortunately, a set benchmark for the amount of Mucin-1 or Mammaglobin B that indicates breast cancer still does not exist, but we will adapt our assay to detect for both minuscule or large concentrations of the biomarkers to allow for its versatility. </p>
+        <p class="ex1">Our planned tests for specificity and selection of aptamers allow for our test to only <b>detect biomarkers specific to breast cancer</b>. This minimizes the chances of false or inaccurate results as our aptamers bind specifically to our biomarkers and no other proteins. By selecting aptamers, we have not only developed a convenient way for detection but a method that is highly sensitive and specific.</p>
+        
+        <p class="ex2">Biomarker Collection Methods</p>
+        <p class="ex1">When designing our testing device and our experiments, the first area of concern was our method of collection.</p>
+        <p class="ex1">Clinical tests like mammograms or biopsies have proven to be extremely accurate and reliable for the detection of breast cancer. However, they are invasive and based on our extensive interviewing for human practices, many women are uncomfortable getting these tests and would prefer a more convenient method for detection. This is why we designed a testing kit that is <b>convenient</b> and <b>portable</b> to target our proposed audience, which was the main focus of our project.</p>
+        <p class="ex1">Therefore, when we researched our biomarkers, we selected Mammaglobin B and Mucin 1. This is because Mammaglobin B is found in high levels in the lacrimal and salivary glands, while Mucin 1 is found in high levels in sweat gland cells. We hypothesized that since both biomarkers are present in sweat and tears, they are effective for a <b>noninvasive method of breast cancer detection</b>. Our final biomarker, HER-2, while found in blood, is an established biomarker with high efficiency, which is why we selected this as a comparison with Mucin-1 and Mammaglobin B.</p>
+        <p class="ex1">Our idea for convenient detection was praised by Professor Kazunori Ikebukuro of Tokyo University of Agriculture and Science when we met with him to discuss our project idea, as he mentioned that some people are unwilling to undergo procedures such as the drawing of blood(even if it is painless) and that using alternatives such as detection through sweat and tears would be effective and life-changing. However, he cautioned us on methods of collection for sweat and tears, as biomarker concentrations can vary greatly. Based on his advice, we performed the following research for the collection of our biomarker in order to show how our project would be implemented in the market.</p>
+        <p class="ex3">Collection of Mucin-1 Biomarker</p>
+        <p class="ex1">Mucin-1 is found in high levels in sweat gland cells, and we hypothesize that through collecting sweat and analyzing for biomarker concentration, we will be able to detect levels of Mucin-1. Our research has shown that sweat can be collected through using pads or capillary tubing, and many commercial products exist on the market. Therefore, our solution is to collect sweat through a pad, filter the content, and using our Au-NP system to detect our biomarker. </p>
+        
+        <content>
+          <center><img src="./Implementation Media/ASIJ_Tokyo_Implementation_img2.png" width = "200px" height="300px"></content>
+            <figcaption>Figure 2:Created with BioRender.com</figcaption></center>
+        
+        <p class="ex2">Collection of Mammoglobin-B Biomarker</p>
+        <p class="ex1">Mammoglobin-B is found in high levels in salivary and lacrimal gland cells. We hypothesize two methods to help collect samples for Mammaglobin-B.</p>
+        <p class="ex1">First, we can collect salivary samples. With the COVID-19 pandemic, methods for salivary sample collection are very convenient and accessible. Additionally, saliva collection can be done at home without the use of specialized equipment or personnel, allowing for convenient at-home detection. However, when designing our collection system, we may need to consider methods to purify or monitor the quality of samples. Among the different methods for the collection of our biomarker, we hypothesize that this is the most potential due to the existing methods on the market and the prominence of this testing method. Therefore, we propose using a <b>saliva collection technique</b> for our physical testing device.</p>
+        <center><img src="./Implementation Media/ASIJ_Tokyo_Implementation_img3.png" width = "200px" height="300px"></content>
+          <figcaption>Figure 3: Created with BioRender.com</figcaption></center>
+        <p class="ex1">Another method would be to collect tears. However, this method has various limitations and considerations. First, depending on the type of tears, the content of biomarker may vary greatly and research on the content of Mammoglobin-B in lacrimal gland cells is still limited. In addition, while tear collection kits do exist on the market, they are not firmly established and there is a significant barrier with how to get individuals to cry to collect the tears. However, despite the limitations, we want to present this as a potential method for collecting our biomarker.</p>
+        <content>
+          <center><img src="Implementation Media/ASIJ_Tokyo_Implementation_img4.png" width="180px" height="100px"></center>
+        </content>
+        <figcaption>Figure 4: Created with BioRender.com</p>
+        <p><br></p>
+        
+        <p class="ex2">Collection of HER-2 Biomarker</p>
+        <p class="ex1">The concentration of HER-2 can be measured through a biopsy, but recent research suggests that there is enough concentration of HER-2 to be detected through blood. Therefore, in order to collect HER-2, we recommend using an at-home blood testing kit, which widely exists on the market. However, at-home blood sample collection is prone to danger and can be potentially a safety hazard if users do not follow the procedures correctly. Nevertheless, blood sample collection is a prominent method for breast cancer detection due to the abundance of painless methods that exist. Combined with our Au-NP system, the sample collected from blood can be used to detect the amount of HER-2, and the presence of breast cancer can be determined based on the benchmark for HER-2. Therefore, we also propose using a blood collection technique for our physical testing device.</p>
+        
+        <content>
+          <center><img src="Implementation Media/ASIJ_Tokyo_Implementation_img5.png" width="200px" height="300px"></center>
+        </content>
+        <figcaption>Figure 5: Created with BioRender.com</p>
+          <p><br></p>
+
+
+        <p class="ex2"><u>References</u></p>
+        <p class="ex1">American College of Radiology, & Radiological Society of North America. (2019, October 7). <i>Ultrasound - breast</i>. Radiologyinfo.org. https://www.radiologyinfo.org/en/info/breastus. </p>
+        <p class="ex1"><i>Breast magnetic resonance imaging (mri)</i>. Johns Hopkins Medicine. (n.d.). https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/breast-mri. </p>
+        <p class="ex1">DeSantis, C. E., Fedewa, S. A., Goding Sauer, A., Kramer, J. L., Smith, R. A., & Jemal, A. (2016). Breast cancer statistics, 2015: Convergence of incidence rates between black and white women. <i>CA: A Cancer Journal for Clinicians</i>, 66(1), 31–42.</p>
+        <p class="ex1">Hassan, E. (2017). <i>In Vitro Selections of Mammaglobin B and Mammaglobin A Aptamers for detecting Metastatic Breast Cancer Cells Using Terahertz Chemical Microscopy </i>[Phd, Université du Québec, Institut national de la recherche scientifique]. http://espace.inrs.ca/id/eprint/8023/</p>
+        <p class="ex1">Hassan, E. M., Willmore, W. G., McKay, B. C., & DeRosa, M. C. (2017). In vitro selections of mammaglobin A and mammaglobin B aptamers for the recognition of circulating breast tumor cells. Scientific Reports, 7(1), 1–18.</p>
+        <p class="ex1">Jing, X., Liang, H., Hao, C., Yang, X., & Cui, X. (2019). Overexpression of MUC1 predicts poor prognosis in patients with breast cancer. Oncology Reports, 41(2), 801–810.
+        </p>
+        <p class="ex1">Katanoda, K., Kamo, K.-I., Saika, K., Matsuda, T., Shibata, A., Matsuda, A., Nishino, Y., Hattori, M., Soda, M., Ioka, A., Sobue, T., & Nishimoto, H. (2014). Short-term projection of cancer incidence in Japan using an age-period interaction model with spline smoothing. <i>Japanese Journal of Clinical Oncology</i>, 44(1), 36–41.
+        </p>
+        <p class="ex1">Keefe, A. D., Pai, S., & Ellington, A. (2010). Aptamers as therapeutics. <i>Nature Reviews. Drug Discovery</i>, 9(7), 537–550.
+        </p>
+        <p class="ex1">Kufe, D. W. (2013). MUC1-C oncoprotein as a target in breast cancer: activation of signaling pathways and therapeutic approaches. <i>Oncogene</i>, 32(9), 1073–1081.
+        </p>
+        <p class="ex1">Kumar, P., & Aggarwal, R. (2015, September 4). <i>An overview of triple-negative breast cancer</i>. Archives of gynecology and obstetrics. https://pubmed.ncbi.nlm.nih.gov/26341644/. 
+        </p>
+        <p class="ex1">Kumar, P., Ji, J., Thirkill, T. L., & Douglas, G. C. (2014). MUC1 Is Expressed by Human Skin Fibroblasts and Plays a Role in Cell Adhesion and Migration. <i>BioResearch Open Access</i>, 3(2), 45–52.
+        </p>
+        <p class="ex1"><i>Mammogram Basics</i>. (n.d.). Retrieved August 16, 2021, from https://www.cancer.org/cancer/breast-cancer/screening-tests-and-early-detection/mammograms/mammogram-basics.html</p>
+        <p class="ex1">Libson, S., & Lippman, M. (2014, February 26). <i>A review of clinical aspects of breast cancer</i>. International review of psychiatry (Abingdon, England). https://pubmed.ncbi.nlm.nih.gov/24716497/. 
+        </p>
+        <p class="ex1">Mayeux, R. (2004). Biomarkers: potential uses and limitations. <i>NeuroRx: The Journal of the American Society for Experimental NeuroTherapeutics</i>, 1(2), 182–188.
+        </p>
+        <p class="ex1">Mayo Clinic Staff. (2019, July 31). Breast biopsy. Mayo Clinic. https://www.mayoclinic.org/tests-procedures/breast-biopsy/about/pac-20384812. 
+        </p>
+        <p class="ex1">Mayo Foundation for Medical Education and Research. (2021, June 4). <i>Breast cancer</i>. Mayo Clinic. https://www.mayoclinic.org/diseases-conditions/breast-cancer/symptoms-causes/syc-20352470. 
+        </p>
+        <p class="ex1">Ohno, S., Kuroi, K., & Toi, M. (2013). An overview of the Japan Breast Cancer Research Group (JBCRG) activities. <i>Breast Cancer </i>, 20(4), 291–295.
+        </p>
+        <p class="ex1">Sceaphierde, C. (2021, April 12). <i>Pink Ribbon Design Award raising awareness about breast cancer in Japan</i>. https://japantoday.com/category/features/health/pink-ribbon-design-award-raising-awareness-about-breast-cancer-in-japan
+        </p>
+        <p class="ex1">Sharma, G. N., Dave, R., Sanadya, J., Sharma, P., & Sharma, K. K. (2010). Various types and management of breast cancer: an overview. <i>Journal of Advanced Pharmaceutical Technology & Research</i>, 1(2), 109–126.
+        </p>
+        <p class="ex1">Smith, J. E., Chávez, J. L., Hagen, J. A., & Kelley-Loughnane, N. (2016). Design and Development of Aptamer–Gold Nanoparticle Based Colorimetric Assays for In-the-field Applications. <i>Journal of Visualized Experiments: JoVE</i>, 112. https://doi.org/10.3791/54063
+        </p>
+        <p class="ex1">Sun, Y.-S., Zhao, Z., Yang, Z.-N., Xu, F., Lu, H.-J., Zhu, Z.-Y., Shi, W., Jiang, J., Yao, P.-P., & Zhu, H.-P. (2017). Risk Factors and Preventions of Breast Cancer. <i>International Journal of Biological Sciences</i>, 13(11), 1387–1397.
+        </p>
+        <p class="ex1">Takabe, K. (2017, July 25). <i>Breast cancer rates rising Among Japanese women</i>. Roswell Park Comprehensive Cancer Center. https://www.roswellpark.org/cancertalk/201707/breast-cancer-rates-rising-among-japanese-women. 
+        </p>
+        <p class="ex1">Ullah, M. F. (2019, August 28). <i>Breast Cancer: Current Perspectives on the Disease Status</i>. SpringLink. https://link.springer.com/chapter/10.1007%2F978-3-030-20301-6_4. 
+        </p>
+        <p class="ex1">Uchida, K., Ohashi, H., Kinoshita, S., Nogi, H., Kato, K., Toriumi, Y., Yamashita, A., Kamio, M., Mimoto, R., & Takeyama, H. (2015). <i>Breast cancer screening and the changing population pyramid of Japan</i>. Breast Cancer , 22(2), 172–176.
+        </p>
+        <p class="ex1">Yonemoto, R. H. (1980, September). <i>Breast cancer in Japan and United STATES: EPIDEMIOLOGY, hormone RECEPTORS, pathology, and survival</i>. Archives of surgery (Chicago, Ill. : 1960). https://pubmed.ncbi.nlm.nih.gov/6251779/. 
+        </p>
+        <p class="ex1">Zou, X., Wu, J., Gu, J., Shen, L., & Mao, L. (2019). Application of Aptamers in Virus Detection and Antiviral Therapy.<i> Frontiers in Microbiology</i>, 10, 1462.
+        </p>
+        <p class="ex1"><i>乳がん検診にかかる費用はどれくらい？ ４つの受診方法. 健診プラザ日本橋.</i> (2017, August 8). http://nihombashi-mc.jp/column/breast-cancer/breast-cancer-cost.html. 
+        </p>
+        <p class="ex1">知っておきたいがん検診. (n.d.). Retrieved August 16, 2021, from https://www.med.or.jp/forest/gankenshin/data/japan/</p>
+
+
+      </article>
+
+    
+
+      <nav1>
+        <p>Nav</p>
+        <p>Promotional Video</p>
+      </nav1>
+
+    </div>
+
+    
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</body>
