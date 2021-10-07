@@ -105,7 +105,11 @@
     li {
         padding-left: 2.5em;
     }
-
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
   </style>
 </head>
 
@@ -132,7 +136,7 @@
         <br>
         <p class="ex2"><u>Team Members</u></p>
         <br>
-        <p class="ex3">Project Selection and Research</p>
+        <p id="p" class="ex3">Project Selection and Research</p>
         <div class="content">
             <table>
                 <tr>
@@ -153,7 +157,7 @@
                 </tr>
               </table>
               <br>
-              <p class="ex3">Experimental</p>
+              <p id="e" class="ex3">Experimental</p>
                   <table>
                       <tr>
                         <td>Experimental Planning</td>
@@ -177,7 +181,7 @@
                       </tr>
                     </table>
                     <br>
-                    <p class="ex3">Modeling</p>
+                    <p id="m" class="ex3">Modeling</p>
                     <table>
                         <tr>
                           <td>Protein Modeling</td>
@@ -197,7 +201,7 @@
                         </tr>
                       </table>
                     <br>
-                      <p class="ex3">Human Practices</p>
+                      <p id="h" class="ex3">Human Practices</p>
                         <table>
                             <tr>
                                 <td>Haname RFTC Project Interview</td>
@@ -237,7 +241,7 @@
                             </tr>
                             </table>
                         <br>
-                        <p class="ex3">Educational Outreach</p>
+                        <p id="edu" class="ex3">Educational Outreach</p>
                             <table>
                                 <tr>
                                 <td>Promotional Video</td>
@@ -266,7 +270,7 @@
                             </table>
                     <br>
 
-                    <p class="ex3">Wiki and Deliverables</p>
+                    <p id="wiki" class="ex3">Wiki and Deliverables</p>
                   <table>
                       <tr>
                         <td>Parts Design</td>
@@ -372,17 +376,19 @@
       <nav1>
         <div id="scroll">
           <br>
-          <p><a href="#surveys">Project Selection and Research</a></p>
           <br>
-          <p><a href="#collab">Experimental</a></p>
           <br>
-          <p><a href="#vid">Modeling</a></p>
+          <p><a href="#p">Project Selection and Research</a></p>
           <br>
-          <p><a href="#pam">Human Practices</a></p>
+          <p><a href="#e">Experimental</a></p>
           <br>
-          <p><a>Educational Outreach</a></p>
+          <p><a href="#m">Modeling</a></p>
           <br>
-          <p><a>Wiki and Deliverables</a></p>
+          <p><a href="#h">Human Practices</a></p>
+          <br>
+          <p><a href="#edu">Educational Outreach</a></p>
+          <br>
+          <p><a href="#wiki">Wiki and Deliverables</a></p>
         </div>
       </nav1>
 
