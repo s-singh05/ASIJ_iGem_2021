@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
@@ -9,19 +9,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='./style_main.css' rel='stylesheet'>
+
+    
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+
+      a {
+        color: pink !important;
+      }
+  </style>
 </head>
+
+
 
 <body>
     <!--Navigation bar code to put in each page to import navbar-->
-    <div id="nav-placeholder">
+      <div id="nav-placeholder">
+      </div>
+
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Model Overview</u></h1>
+        </div>
+        <br>
+        <br>
+        
+        <div class="content">
+          <p class="ex1">Modeling serves as a powerful tool in Synthetic Biology, as it serves as a way to verify our findings and depict relationships between several parameters. In particular, since we were unable to conduct experiments in the fall, our models served as a way to strengthen our project and visualize our predicted results.</p>
+        </div>
+
+          <p class="ex1">We first used <u><a href="Model_Math_Models.html">mathematical modeling</a></u> to derive the rate of interaction between the aptamer and biomarker to show the activity between them.</p>
+          <p class="ex1">We also used <u><a href="Models_Protein_Models.html">protein modeling</a></u> to model the interaction between aptamer and biomarker and visualize their interaction in a three dimensional manner.</p>
+          
+        
+      </article>
+
+    
+      <!--For the menu anchor, have the two buttons link to the respective model pages rather than the spot on this page which talks about each, since there isnt much need for division.-->
+      <nav1>
+        <p>Math Models</p>
+        <p>Protein Models</p>
+      </nav1>
+
     </div>
 
-  <script>
-    $(function(){
-      $("#nav-placeholder").load("navbar.html");
-    });
-  </script>
-  <!--end of Navigation bar-->
+    
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
 </body>
 
 </html>
