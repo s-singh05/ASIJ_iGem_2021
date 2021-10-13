@@ -81,6 +81,12 @@
         float: left;
         padding: 0 50px 0 0;
       }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
   </style>
 </head>
 
@@ -106,7 +112,7 @@
         </div>
         <br>
         <br>
-        <p class="ex2"><u>Inspiration</u></p>
+        <p id="ins" class="ex2"><u>Inspiration</u></p>
         <div class="content">
           <p class="ex1">In recent years, breast cancer has become a major problem in the global community, and is the second leading cause of cancer deaths among women (Sun et al., 2017). Breast cancer is a type of metastatic cancer (cancer that spreads throughout the body) originating from breast tissue, and specifically the inner lining of milk ducts or lobules that provide the ducts with milk (Sharma et al., 2010).           </p>
           <p class="ex1">In Japan, despite advances in medical technology and emphasis on a healthy lifestyle, the incidence of breast cancer has risen yearly (Ohno et al., 2013).  In fact, the projected breast cancer incidence in Japan was estimated to be at 92,300 in 2020, accounting for approximately 20% of all cancer cases in women (Katanoda et al., 2014). Current breast cancer testing methods, such as mammograms and breast MRIs, can be uncomfortable and expensive, which creates a stigma around testing that discourages early screening rates; in Japan, the screening rate for women over the age of 40 is only about 40% (Sceaphierde, 2021). <b>These statistics raise the urgent need for early and widespread diagnosis for breast cancer in Japan.</b></p>
@@ -122,7 +128,7 @@
        
         </div>
 
-        <p class="ex2"><u>Background</u></p>
+        <p id="back" class="ex2"><u>Background</u></p>
         <p class="ex3">What is Breast Cancer?</p>
         <p><br></p>
         <content>
@@ -147,10 +153,10 @@
         <figcaption>Figure 4: Results from our International Survey showing the common factors that prevent people from getting tested for breast cancer </figcaption>
       <p class="ex1">The main factors preventing people from being tested or making them unwilling to do so include the cost (insurance only covers 30% of the cost—or none, if lacking a doctor’s recommendation), inconvenience, time commitment, social stigma, and so on. Another reason that is especially common among Japanese women is the fear of pain. Mammograms can be quite painful, given how it involves pressing the patient’s breasts between two plates. Additionally, many women feel uncomfortable about the idea of having their breast screening conducted by a male doctor, as certain factors like the gender of the doctor are not specified or guaranteed by the government or companies that provide subsidized or free testing for citizens/employees.</p>
       
-      <p class="ex2"><u>Goal</u></p>
+      <p id="goal" class="ex2"><u>Goal</u></p>
         <p class="ex1">Based on the raised issues regarding the current methods of detection, our goal is to create an at-home, convenient breast cancer testing kit that would be similar in design to a pregnancy test. This testing kit would make testing more accessible, less invasive, and more affordable for women of all ages. Through our testing kit, we hope to make early screening and detection rates significantly higher, and allow women to go through a pain free and simple process that is reliable and accurate to detect breast cancer. </p>
 
-        <p class="ex2"><u>Project Focus</u></p>
+        <p id="focus" class="ex2"><u>Project Focus</u></p>
         <p class="ex3">Summary</p>
         <p class="ex1">In order to build our optimal test kit and address issues such as accessibility, cost, and convenience, we decided to employ aptamers and a cell-free system such that we could develop an at-home, noninvasive testing kit for anyone who wanted to screen for breast cancer. </p>
         <p class="ex1">Our project is a <b>two-year phase project</b>. In Year One (2021 iGEM Season), inspired by past projects from XMU-China(2018) and INSA-Lyon(2016), we will focus on theoretical-based experiments such as <b>observing the interaction between aptamer and biomarker</b> along with <b> testing our gold-nanoparticle detection system with our biomarkers synthesized from E.Coli. </b>. Specifically, our system will use <b> colorimetric output produced by aggregation of gold nanoparticles to detect for the binding between aptamer and biomarker</b>.</p>
@@ -174,7 +180,7 @@
         <p class="ex1">Next, while interaction between biomarker and aptamer is quoted in literature, we wanted to test this finding for ourselves as many aptamers are still uncharacterized and need verification. Therefore, we <b>verified the interaction between aptamer and biomarker via ELISA</b> in order to demonstrate the strong binding abilities of aptamer. During the ELISA assay, we also compared the activity of our synthesized and ordered biomarkers in order to measure the activity of our synthesized biomarkers.</p>
         <p class="ex1">Finally, <b>we developed an aptamer based detection assay using AU nanoparticles</b>. AU nanoparticles are highly versatile and have been adapted into portable lateral flow technologies. Since our objective for the second year was to design a testing kit that was convenient and affordable, we believe that using AU nanoparticles will set the framework and basis for our transition into the design of a testing kit in iGEM for the second year.</p>
        
-        <p class="ex2"><u>References</u></p>
+        <p id="ref" class="ex2"><u>References</u></p>
         <p class="ex1">American College of Radiology, & Radiological Society of North America. (2019, October 7). <i>Ultrasound - breast</i>. Radiologyinfo.org. https://www.radiologyinfo.org/en/info/breastus. </p>
         <p class="ex1"><i>Breast magnetic resonance imaging (mri)</i>. Johns Hopkins Medicine. (n.d.). https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/breast-mri. </p>
         <p class="ex1">DeSantis, C. E., Fedewa, S. A., Goding Sauer, A., Kramer, J. L., Smith, R. A., & Jemal, A. (2016). Breast cancer statistics, 2015: Convergence of incidence rates between black and white women. <i>CA: A Cancer Journal for Clinicians</i>, 66(1), 31–42.</p>
@@ -231,10 +237,20 @@
     
 
       <nav1>
-        <p>Nav</p>
-        <p>Promotional Video</p>
+        <div id="scroll">
+          <br>
+          <p><a href="#ins">Inspiration</a></p>
+          <br>
+          <p><a href="#back">Background</a></p>
+          <br>
+          <p><a href="#goal">Goal</a></p>
+          <br>
+          <p><a href="#focus">Project Focus</a></p>
+          <br>
+          <p><a href="#ref">References</a></p>
+        </div>
       </nav1>
-
+    
     </div>
 
     
@@ -253,6 +269,24 @@
           content.style.maxHeight = content.scrollHeight + "px";
         } 
       });
+    }
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("scroll");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
     }
     </script>
 </body>
