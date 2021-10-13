@@ -9,7 +9,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='./style_main.css' rel='stylesheet'>
+
+    
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+
+      /* The sticky class is added to the header with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
+  </style>
 </head>
+
 
 
 <body>
@@ -23,6 +104,123 @@
       });
     </script>
     <!--end of Navigation bar-->
+
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Partnership</u></h1>
+        </div>
+        <br>
+        <br>
+        <p id="surveys" class="ex2">Partnership with Korea_HS</p>
+        <content>
+            <p id="over" class="ex1"><b>Overview</b><br>For the 2021 iGEM season, we decided to have a partnership with Korea_HS, a high school team from Korea_HS as both teams were investigating the topic of breast cancer. Specifically, since ASIJ_Tokyo was focusing on detection and Korea_HS was focusing on treatment, we realized that there were many areas of collaboration such as education, human practices, wet lab, and dry lab.</p>
+            <p class="ex1">Throughout the season, we met weekly with Korea_HS to give updates on our partnership and project progress. As a result of our frequent meetings, the partnership was able to benefit both teams significantly throughout the season. Some of our key achievements include <b>improvement of general project insight, educational video collaboration, organization of the Autumn Dry Lab Bootcamp</b>, and <b>formation of the iGEM High School Joint Collaboration Network. </b></p>
+            
+            <p id="initial" class="ex1"><b>Initial Meetings</b><br>Our initial meetings with Korea_HS serve as a way for both teams to <b>give advice on our preliminary project ideas</b> and <b>experimental considerations.</b></p>
+            <p class="ex1">We met with Korea_HS for the first time on July 1st, where both teams gave a presentation on their respective projects. From this initial meeting, we realized that possible areas of collaboration could include <b>dry lab</b> and <b>proof-of-concept.</b></p>
+            <p class="ex1">Therefore, we decided to meet again with Korea_HS on July 14th to discuss the possibilities of a partnership between the two teams. Following this meeting, we decided to find areas of collaboration that would strongly impact our work in this preliminary stage.</p>
+            <p class="ex1">We held multiple subsequent meetings to work on these areas of collaborations and as a result, both teams had a strong direction and preparation for the iGEM Jamboree.</p>
+            
+            <p id="take" class="ex1"><b>Takeaway of ASIJ_Tokyo</b><br>An area that our team was having trouble with was proof-of-concept and experimental focus, as we were not sure how we could use our experiments to justify the potential of our detection system.</p>
+            <p class="ex1">Korea_HS, which had access to more specialized equipment, suggested us that for proof-of-concept, we could conduct a Western Blot to verify the interaction between aptamer and biomarker and a FITC (specificity) assay to confirm that our biomarker is specific to selected breast cancer carcinoma only. While we were unable to conduct the FITC assay due to equipment constraints, we took the advice of Korea_HS to use a Western Blot and developed an ELISA assay to confirm this interaction.</p>
+            <p class="ex1">Additionally, we had some questions regarding how to utilize our aptamer-based detection system, and whether we should use fluorescence intensity or other assays. Korea_HS helped file our questions to their mentor, who provided us with insightful answers that helped guide our transition towards gold nanoparticles.</p>
+            
+            <p id="take2" class="ex1"><b>Takeaway of Korea_HS</b><br>An area that Korea_HS wanted verification with was the different medal criteria such as proof of concept and improvement of an existing part and requirements that defined each medal criteria. </p>
+            <p class="ex1">Since ASIJ_Tokyo has prior experience in participating in the iGEM Jamboree, we explained that for improvement of an existing part, the part must be improved substantially and in order to monitor the activity between the improved part and existing part, the efficiency of both parts have to be compared against each other. For the proof of concept criteria, we suggested that Korea_HS should build off the information in their proposed implementation. For example, if Korea_HS explains that their treatment will target breast cancer, a possible proof of concept is to see whether the treatment is applicable and specific to breast cancer.</p>
+            <p class="ex1">Additionally, Korea_HS wanted some help on possible modeling ideas. We had our modeling member Annmarie Hashimoto speak to Korea_HS on the different types of modeling programs and give Korea_HS some suggestions and ideas on how to proceed with modeling in their experiments.</p>
+            
+            <p id="hp" class="ex1"><b>HP and Education Meetings</b><br>Once we completed our meetings to support our experimental and project design, Korea_HS and ASIJ_Tokyo decided to extend our partnership by focusing on the <b>human practices</b> and <b>education component</b> since both teams were working on breast cancer.</p>
+            <p class="ex1">For this portion of our collaboration, we completed the following activities in order to <b>close the loop between our projects and our community</b> and to <b>better inform our community on breast cancer and synthetic biology.</b></p>
+
+            <p class="ex1">1. “How To iGEM” - Book Creation Project (2021 NOUS)<br>We worked with Korea_HS to contribute to the high school section of the book creation project of 2021 NOUS. We decided to add this section to the book as we believed that there are many challenges with starting and competing as a high school team, and <b>we wanted to offer our advice to HS teams participating in iGEM.</b></p>
+            <p class="ex1">2. Northeast Asia Joint Collaboration Network</p>
+            <div class="content">
+              <center><img src="./HP Files/part1.png" width="800px" height="450px"></center>
+            </div>
+            <p class="ex1">ASIJ_Tokyo and Korea_HS established the Asia High School Joint Collaboration Network, a network between high school teams in the Asia region. With the majority of teams participating in iGEM being collegiate teams, we found that it was often difficult for high school teams to find meaningful collaboration or discussion opportunities due to the large knowledge level gap between HS and collegiate teams.  For our collaboration network, we arranged for teams to introduce their projects and collaborate in small groups to aid each other in areas like wet lab, dry lab, and wiki publication. Through our network, we wanted to make something bigger and more impactful than just a few superficial meetings! <b>Establishing this network helped us connect the high school teams in our region together and benefited the projects of both teams significantly.
+            </b></p>
+            <p class="ex1">3. Youtube Educational Videos</p>
+            <p class="ex1">Since both Korea_HS and ASIJ_Tokyo based their projects on breast cancer this year, we joined forces to create two educational videos on the disease—one on education and one on awareness.</p>
+            <p class="ex1">The first video we created is a short four-minute video that gives a <b>brief overview of what breast cancer is, detection methods and treatments for the disease.</b> We integrated simple animations in this video to make the video accessible and understandable to a wide audience. In the month of October, both Korea_HS and ASIJ_Tokyo helped disseminate the video to our local communities as a method of educating people about breast cancer.</p>
+            <p class="ex1"><a href="https://www.youtube.com/watch?v=4xNxGSJHVWI&t=116s" target="_blank">LINK VIDEO</a></p>
+            <figcaption>Video Attributions: (Introduction: Korea_HS, General Information: ASIJ_Tokyo, Detection: ASIJ_Tokyo, Treatment: Korea_HS)</figcaption>
+            <p class="ex1">The second video we created aims to raise awareness on breast cancer. In order to do this, we decided to <b>interview people of different age groups and backgrounds</b>—MS student, HS student, Medical Student, and Researcher. By interviewing people of different age groups, we were able to see the changes and differences in their knowledge on breast cancer. We hope that by doing this, whether our viewer is an elementary school student or an adult, they will be able to get some <b>new knowledge out of this awareness video.</b></p>
+            <p class="ex1">We thank all our fellow interviewees for taking their time to participate and help with the production of this educational video.</p>
+            <p class="ex1"><a href="https://www.youtube.com/watch?v=82gxPqlgtJ4&t=141s" target="_blank">LINK VIDEO</a></p>
+            <figcaption>Video Attributions: (MS Student Interview: Korea_HS, HS Student Interview: ASIJ_Tokyo, Medical Student Interview: Korea_HS, Researcher Interview: ASIJ_Tokyo, Editing: ASIJ_Tokyo)</figcaption>
+            <p class="ex1">Through creating these videos, we were able to <b>better inform our community on breast cancer to show the impact of our project on both teams.</b></p>
+            <p class="ex1">4. Dry Lab Webinar</p>
+            <p class="ex1">In conjunction with Korea_HS, we organized a dry lab webinar on September 25 2021 that aimed to educate high school students on the <b>applications of modeling software in scientific research. </b></p>
+            <div class="content">
+              <center><img src="./HP Files/part2.png" width="800px" height="450px"></center>
+            </div>
+            <p class="ex1">Both Korea_HS and ASIJ_Tokyo realized that in our projects this year, modeling has served as a way to verify our findings and demonstrate how our project could be implemented in a hypothetical setting. Therefore, we realized the importance of showing other young students the <b>potential and importance of modeling in an experimental setting.</b></p>
+            <p class="ex1">From conducting this webinar, we were able to <b>show our community the application of modeling synthetic biology and get young students inspired in science.</b></p>
+            <p class="ex1">5. After iGEM</p>
+            <p class="ex1">Both Korea_HS and ASIJ_Tokyo wanted our partnership to <b>extend beyond the 2021 iGEM season</b>, so we established a framework to <b>mentor</b> the members of the 2022 Korea_HS and ASIJ_Tokyo teams and <b>continue the partnership</b> through subsequent seasons.</p>
+          </content>
+
+
+        
+      </article>
+
+
+        <nav1>
+          <div id="scroll">
+            <br>
+            <br>
+            <p><a href="#over">Overview</a></p>
+            <br>
+            <p><a href="#initial">Initial Meetings</a></p>
+            <br>
+            <p><a href="#take">Takeaway of ASIJ_Tokyo</a></p>
+            <br>
+            <p><a href="#take2">Takeaway of Korea_HS</a></p>
+            <br>
+            <p><a href="#hp">HP and Education Meetings</a></p>
+          
+          </div>
+        </nav1>
+
+    </div>
+
+    
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("scroll");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
 </body>
 
   <!--Footer code to put at the bottom of each page to import footer-->
