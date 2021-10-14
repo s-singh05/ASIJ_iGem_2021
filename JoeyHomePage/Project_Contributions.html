@@ -89,6 +89,24 @@
         top: 0;
         width: 100%
       }
+      table {
+        border-collapse: collapse;
+        width: 80%;
+      }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    li {
+        padding-left: 2.5em;
+    }
   </style>
 </head>
 
@@ -191,7 +209,79 @@
         <p id="pam" class="ex2">Aptamer and Kd Values</p>
         <br>
         <content>
-  
+          <table>
+            <tr>
+              <td>Aptamer Name</td>
+              <td>Sequence</td>
+              <td>Kd value(Literature)</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.1</td>
+              <td>TAAGAACAGGGCGTCGTGTTACGAG</td>
+              <td>33.38 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.2</td>
+              <td>GTGGCTTACTGCGAGGACGGGCCCA</td>
+              <td> 0.221 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.3</td>
+              <td>GCAGTTGATCCTTTGGATACCCTGG</td>
+              <td>0.135 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.4</td>
+              <td>AACCCTATCCACTTTTCGGCTCGGG</td>
+              <td>25.00 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.5</td>
+              <td>CGAATGGGCCCGTCCTCGCTGTAAG</td>
+              <td>25.1 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.6</td>
+              <td>GCAACAGGGTATCCAAAGGATCAAA</td>
+              <td>21.00 nM</td>
+            </tr>
+            <tr>
+              <td>HeA2_1: </td>
+              <td>ATTAAGAACCATCACTCTTCCAAATGGATATACGACTGGG</td>
+              <td>28.9 nM</td>
+            </tr>
+            <tr>
+              <td>HeA2_3</td>
+              <td>TCTAAAAGGATTCTTCCCAAGGGGATCCAATTCAAACAGC</td>
+              <td>6.2 nM</td>
+            </tr>
+            <tr>
+              <td>HeA2_4:</td>
+              <td>CAAACAGAAAATTGCCTATTTAGCTGTCTCTGAGATTCGA</td>
+              <td>Not reported in literature</td>
+            </tr>
+            <tr>
+              <td>HeA2_5:</td>
+              <td>AGTCAGTAGTTCGGCTTATGATTTTATACATCTTACCCCT</td>
+              <td>Not reported in literature</td>
+            </tr>
+            <tr>
+              <td>HeA2_6:</td>
+              <td>TCGCATCAGTGTTTTAATAGTCAACCGGTAAATGTTTCCC</td>
+              <td>Not reported in literature</td>
+            </tr>
+            <tr>
+              <td>MAMB1</td>
+              <td>CATGCTTACCTATAGTGAACCCAACGTCGAACTGAATCCCGTGTCCTTTGAGAACTGACTCATAC</td>
+              <td>13.0 nM</td>
+            </tr>
+            <tr>
+              <td>MAMA2</td>
+              <td>CATGCTTACCTATAGTGAACCCGGGACAGAACGTGCGCTTTGAGCTTTGAGAACTGACTCATAC</td>
+              <td>3.0 nM</td>
+            </tr>
+          </table>
+          <br>
         </content>
 
         <p class="ex2">References</p>
