@@ -3,13 +3,113 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="my_style.css" rel="stylesheet">
+    <script src="my_script.js"></script>
     <title>ASIJ_Tokyo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="my_style2.css">
     <link href='./style_main.css' rel='stylesheet'>
+
+
+    
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 40vh);
+      }
+      #main > article {
+        flex: 1;
+      }
+      #main > nav1, 
+      #main > aside {
+        flex: 0 0 20vw;
+        background: white;
+      }
+      #main > nav1 {
+        order: -1;
+        padding-top:4em;
+        padding-left: 5em;
+        padding-right: 0em;
+      }
+      footer nav1, aside {
+        padding: 5em;
+      }
+      
+      #main > article {
+        padding: 5em;
+
+      }
+      header {
+        padding: 0;
+      }
+      footer {
+        background: #FFCECE;
+        height: 20vh;
+      }
+      p.ex1{
+        padding-top: 1em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 1em;
+      }
+      p.ex2 { 
+        font-size: x-large;
+        text-align: left;
+      }
+
+      p.ex3 {
+        font-size: larger;
+        text-align: left;
+        padding-left: 2em;
+      }
+
+      figcaption {
+        font-size: small;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 5em;
+        padding-right: 6em;
+      }
+
+      .left {
+        float: left;
+        padding: 0 50px 0 0;
+      }
+
+      /* The sticky class is added to the header with JS when it reaches its scroll position */
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+      }
+      table {
+        border-collapse: collapse;
+        width: 80%;
+      }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    li {
+        padding-left: 2.5em;
+    }
+  </style>
 </head>
+
 
 
 <body>
@@ -23,6 +123,234 @@
       });
     </script>
     <!--end of Navigation bar-->
+
+    <div id="main">
+      <article>
+        <div class="header">
+          <!--Replace this text with image header-->
+          <h1 class="ex2"><u>Contribution</u></h1>
+        </div>
+        <br>
+        <br>
+        <p id="1" class="ex2">Protein-Coding Sequence Modification</p>
+        <content>
+            <p class="ex1">TFor our synthesis of biomarkers experiment, the protein-coding sequences found from NCBI, were unfortunately not compatible with the BioBrick RFC[10]  and iGEM Type IIS RFC[1000] assembly methods.</p>
+            <div class="content">
+              <center><img src="./HP Files/cont3.png"/></center>
+            </div>
+            <figcaption>Figure 1: Mammaglobin B Protein Coding Sequence
+            </figcaption>
+
+            <p class="ex1">When the raw sequence from NCBI is uploaded to iGEM Registry, it is evident that the sequence is not compatible with any of the Biobrick or iGEM standards.</p>
+            <p class="ex1">Therefore, we decided to troubleshoot this by removing the illegal restriction sites by inducing silent mutations via ApE plasmid editing software. This would cause the produced protein to remain the same but for the sequence to be compatible with iGEM assembly standards.
+            </p>
+            <div class="content">
+              <center><img src="./HP Files/cont4.png" ></center>
+            </div>
+            <figcaption>Figure 2: ApE Plasmid Editor</figcaption>
+            <p clas="ex1">The grey areas in the figure indicate illegal restriction sites and we resolved this by coding for the same 
+              amino acid via a silent mutation.
+              </p>
+            <p class="ex1">We removed all the illegal restriction sites for the protein-coding sequences of Mucin, Mammaglobin B and HER-2(found from NCBI) to be compatible with the BioBrick RFC[10]  and iGEM Type IIS RFC[1000] assembly methods. In order to verify that the silent mutations did not interfere with biomarker function, we synthesized the modified protein-coding sequences in an E.Coli system and results from SDS-PAGE electrophoresis indicated that biomarker synthesis was successful and corresponded to fragment sizes of our biomarkers of interest.</p>
+            <div class="content">
+              <center><img src="./HP Files/cont2.png" ></center>
+            </div>
+            <figcaption>Figure 3: SDS-PAGE on purified proteins expressing the biomarkers of interest</figcaption>
+            <p class="ex1">We hope that for future teams who plan on assembling or synthesizing Mucin, Mammaglobin B, or Her-2 in a prokaryotic system, this contribution will help make assembly more convenient and universal! </p>
+            <p class="ex1">Please click here to our parts registry and our edited parts.</p>
+        
+          </content>
+
+        <p id="2" class="ex2">2021 iGEM Database</p>
+        <content>
+            <p class="ex1">Inspired by the After iGEM Phoenix Project, we decided to create the 2021 iGEM Database to keep track of teams and the various projects they were working on for the current competition season.</p>
+            <p class="ex1">In iGEM, while most collaboration opportunities are done through social media or email, ASIJ_Tokyo noticed the lack of an organized database that listed team projects and topics, which often resulted in missed opportunities by the end of the season. For example, without the database, we would not have realized that Korea_HS, a HS team, was actually working on the same area of interest as our team.</p>
+            <div class="content">
+              <center><img src="./HP Files/cont5.png"></center>
+              <center><img src="./HP Files/cont1.png"></center>
+            </div>
+            <figcaption>Figure 3: Database Interface and Sample Team Information</figcaption>
+
+            <p class="ex1">The aim of the database was to provide a space for teams to share their project ideas and also for other teams to come find collaborations if needed. The inaugural launch of the 2021 iGEM database was fairly successful, and we were able to accumulate information regarding more than 50 teams.
+            </p>
+            <p class="ex1">Our database, using the Airtable format from the After iGEM Phoenix Project, sorts teams by region and has a search bar to allow for teams to select specific keywords. We even included a section where teams could advertise their surveys and social media accounts for other teams to view.</p>
+            <p class="ex1">We realize that the 2021 iGEM Database is not complete, as we were not able to get the information of all the teams participating in the jamboree. Nevertheless, we hope that this provides a framework for future teams who would like to engage in similar opportunities.</p>
+            <p class="ex1">We thank all the teams who filled out our automated database entry survey and After iGEM for the inspiration behind the project.</p>
+            <p class="ex1">CLICK HERE TO CHECK OUT OUR <a href="https://asijigem.wixsite.com/2021database" target="_blank">DATABASE</a></p>
+          </content>
+
+        <p id="3" class="ex2">Literature Review</p>
+        <content>
+            <p class="ex1">When we were researching aptamer sequences for our project, we often encountered difficulties finding the aptamer sequence and relevant information regarding the aptamer.</p>
+            <p class="ex1">We have included the following information about the aptamers we found and their MUC1 S1.4,br>effectiveness(from literature) for future teams. We believe that this information will be useful for teams who want to work with aptamers in the future and do not have the resources to perform the SELEX procedure(making aptamers).</p>
+            <p class="ex1"><b>MUCIN</b><br>MUC1 S1.1:<br>TAAGAACAGGGCGTCGTGTTACGAG<br>MUC1 S1.2:<br>GTGGCTTACTGCGAGGACGGGCCCA<br>MUC1 S1.3<br>GCAGTTGATCCTTTGGATACCCTGG<br>MUC1 S1.4<br>AACCCTATCCACTTTTCGGCTCGGG<br>MUC1 S1.5<br>CGAATGGGCCCGTCCTCGCTGTAAG<br>MUC1 S1.6<br>GCAACAGGGTATCCAAAGGATCAAA</p>
+            <p class="ex1">Literature review has stated that there is quite a lot of research regarding the MUC1 S1.3 aptamer such as its secondary structure and it is used in many studies regarding aptamers (Ferreira et al., 2006). </p>
+
+            <p class="ex1"><b>HER-2</b><br>HeA2_1:<br>ATTAAGAACCATCACTCTTCCAAATGGATATACGACTGGG<br>HeA2_3:<br>TCTAAAAGGATTCTTCCCAAGGGGATCCAATTCAAACAGC<br>HeA2_4:<br>CAAACAGAAAATTGCCTATTTAGCTGTCTCTGAGATTCGA<br>HeA2_5: <br>AGTCAGTAGTTCGGCTTATGATTTTATACATCTTACCCCT<br>HeA2_6:<br>TCGCATCAGTGTTTTAATAGTCAACCGGTAAATGTTTCCC</p>
+            <p class="ex1">Two aptamers, HeA2_1 and HeA2_3 have been shown to bind to HER2 with high affinities from our literature review. It is not known if the HeA2_2 aptamer exists or is effective for experiments (Gijs et al., 2016).</p>
+          
+            <p class="ex1"><b>Mammaglobin-B</b><br>Aptamer 1:<br>CATGCTTACCTATAGTGAACCCAACGTCGAACTGAATCCCGTGTCCTTTGAGAACTGACTCATAC<br>Aptamer 2:<br>CATGCTTACCTATAGTGAACCCGGGACAGAACGTGCGCTTTGAGCTTTGAGAACTGACTCATAC</p>
+            <p class="ex1">We report that aptamer-based studies regarding Mammaglobin B are largely nonexistent. We hypothesize that this is largely due to the long sequence of the mammaglobin B. Based on advice from Dr Kazunori Ikebukuro, aptamers with more than 40 nucleotides often fold several different structures and this causes low reproducibility of binding assay results. We recommend that teams working with Mammaglobin-B either use SELEX to screen for aptamers or attempt to find truncated mutants of the two aptamers listed above(Hassan, 2017).</p>
+          
+          </content>
+        <p id="4" class="ex2">Aptamer-Biomarker Binding Verification</p>
+        <content>
+          <p class="ex1">We verified the binding between aptamer and biomarker for the following aptamer sequences and also derived their Kd values.</p>
+          <p class="ex1">This verification was conducted by performing an ELISA assay and Kd values were calculated through using a non-linear regression with equation y = (x × Bmax) / (x + Kd) to model the absorbance vs concentration data, where Bmax is the maximal binding and Kd is the dissociation constant.</p>
+          <p class="ex1">However, we were unable to receive our parts in time to perform the ELISA assay, but have included methods to derive the value of Kd and sample Kd values that were found in literature for teams who would like to do similar experiments in the future.
+          </p>
+          <p class="ex1">Additionally, from our modeling experiments, we also helped verify the interaction between aptamer and biomarker despite not being able to prove this experimentally.</p>
+          
+          <p class="ex1"><b>Derivation Method</b><br>In any type of binding experiment, the binding affinity can be modeled via a nonlinear regression with equation y = (x × Bmax) / (x + Kd) where Y is the net fluorescence intensity at each concentration, X is the concentration, Bmax is the net fluorescence intensity at saturation, and Kd is the dissociation constant which helps measure the binding affinity (Cho et al., 2013).</p>
+          <p class="ex1">Using this equation, we can help screen and monitor for the efficiency of aptamers and their ability in detection. Therefore, by employing an ELISA assay or fluorescence intensity assay which constructs a graph of concentration vs absorbance, we can easily measure and derive the value of Kd.</p>
+          <p class="ex1">Our math modeling results via the Hill function indicate that the value of Kd is inversely proportional to the binding affinity. Therefore, aptamers with lower Kd values are likely to bind strongly with the biomarker and will serve as better detection probes.</p>
+        </content>
+
+        <p id="5" class="ex2">Aptamer and Kd Values</p>
+        <br>
+        <content>
+          <table>
+            <tr>
+              <td>Aptamer Name</td>
+              <td>Sequence</td>
+              <td>Kd value(Literature)</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.1</td>
+              <td>TAAGAACAGGGCGTCGTGTTACGAG</td>
+              <td>33.38 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.2</td>
+              <td>GTGGCTTACTGCGAGGACGGGCCCA</td>
+              <td> 0.221 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.3</td>
+              <td>GCAGTTGATCCTTTGGATACCCTGG</td>
+              <td>0.135 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.4</td>
+              <td>AACCCTATCCACTTTTCGGCTCGGG</td>
+              <td>25.00 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.5</td>
+              <td>CGAATGGGCCCGTCCTCGCTGTAAG</td>
+              <td>25.1 nM</td>
+            </tr>
+            <tr>
+              <td>MUC1 S1.6</td>
+              <td>GCAACAGGGTATCCAAAGGATCAAA</td>
+              <td>21.00 nM</td>
+            </tr>
+            <tr>
+              <td>HeA2_1</td>
+              <td>ATTAAGAACCATCACTCTTCCAAATGGATATACGACTGGG</td>
+              <td>28.9 nM</td>
+            </tr>
+            <tr>
+              <td>HeA2_3</td>
+              <td>TCTAAAAGGATTCTTCCCAAGGGGATCCAATTCAAACAGC</td>
+              <td>6.2 nM</td>
+            </tr>
+            <tr>
+              <td>HeA2_4</td>
+              <td>CAAACAGAAAATTGCCTATTTAGCTGTCTCTGAGATTCGA</td>
+              <td>Not reported in literature</td>
+            </tr>
+            <tr>
+              <td>HeA2_5</td>
+              <td>AGTCAGTAGTTCGGCTTATGATTTTATACATCTTACCCCT</td>
+              <td>Not reported in literature</td>
+            </tr>
+            <tr>
+              <td>HeA2_6</td>
+              <td>TCGCATCAGTGTTTTAATAGTCAACCGGTAAATGTTTCCC</td>
+              <td>Not reported in literature</td>
+            </tr>
+            <tr>
+              <td>MAMB1</td>
+              <td>CATGCTTACCTATAGTGAACCCAACGTCGAACTGAATCCCGTGTCCTTTGAGAACTGACTCATAC</td>
+              <td>13.0 nM</td>
+            </tr>
+            <tr>
+              <td>MAMA2</td>
+              <td>CATGCTTACCTATAGTGAACCCGGGACAGAACGTGCGCTTTGAGCTTTGAGAACTGACTCATAC</td>
+              <td>3.0 nM</td>
+            </tr>
+          </table>
+          <br>
+        </content>
+
+        <p id="6" class="ex2">References</p>
+        <content>
+          <p class="ex1">Cho, M., Soo Oh, S., Nie, J., Stewart, R., Eisenstein, M., Chambers, J., Marth, J. D., Walker, F., Thomson, J. A., & Soh, H. T. (2013). Quantitative selection and parallel characterization of aptamers. Proceedings of the National Academy of Sciences of the United States of America, 110(46), 18460–18465.</p>
+          <p class="ex1">Ferreira, C. S. M., Matthews, C. S., & Missailidis, S. (2006). DNA aptamers that bind to MUC1 tumour marker: design and characterization of MUC1-binding single-stranded DNA aptamers. Tumour Biology: The Journal of the International Society for Oncodevelopmental Biology and Medicine, 27(6), 289–301.</p>
+          <p class="ex1">Gijs, M., Penner, G., Blackler, G. B., Impens, N. R. E. N., Baatout, S., Luxen, A., & Aerts, A. M. (2016). Improved Aptamers for the Diagnosis and Potential Treatment of HER2-Positive Cancer. Pharmaceuticals , 9(2). https://doi.org/10.3390/ph9020029</p>
+          <p class="ex1">Hassan, E. (2017). In Vitro Selections of Mammaglobin B and Mammaglobin A Aptamers for detecting Metastatic Breast Cancer Cells Using Terahertz Chemical Microscopy [Phd, Université du Québec, Institut national de la recherche scientifique]. http://espace.inrs.ca/id/eprint/8023/</p>
+        </content>
+      </article>
+
+
+        <nav1>
+          <div id="scroll">
+            <br>
+            <br>
+            <br>
+
+            <p><a href="#1">Protein-Coding Sequence Modification</a></p>
+            <br>
+            <p><a href="#2">2021 iGEM Database</a></p>
+            <br>
+            <p><a href="#3">Literature Review</a></p>
+            <br>
+            <p><a href="#4">Aptamer-Biomarker Binding Verification</a></p>
+            <br>
+            <p><a href="#5">Aptamer and Kd Values</a></p>
+            <br>
+            <p><a href="#6">References</a></p>
+          </div>
+        </nav1>
+
+    </div>
+
+    
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("scroll");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
 </body>
 
   <!--Footer code to put at the bottom of each page to import footer-->
